@@ -1,105 +1,562 @@
-/* Reset and Base Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* ============================================
+   HEARTLAND FORWARD DOCUMENTATION STYLESHEET
+   ============================================ */
+
+/* Brand Colors */
+:root {
+  --hf-navy: #243269;
+  --hf-green: #019966;
+  --hf-grey: #D6D6D6;
+  --hf-black: #000000;
+  --hf-white: #ffffff;
 }
 
+/* ============================================
+   HEADER
+   ============================================ */
+
+.hf-header {
+  background-color: var(--hf-white);
+  border-bottom: 3px solid var(--hf-green);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.hf-header-container {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hf-logo-link {
+  display: block;
+  height: 50px;
+}
+
+.hf-logo {
+  height: 100%;
+  width: auto;
+  transition: opacity 0.2s;
+}
+
+.hf-logo:hover {
+  opacity: 0.85;
+}
+
+.hf-nav {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.hf-nav-link {
+  color: var(--hf-navy);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.2s;
+  position: relative;
+  padding-bottom: 0.25rem;
+}
+
+.hf-nav-link:hover {
+  color: var(--hf-green);
+}
+
+.hf-nav-link-active {
+  color: var(--hf-green);
+  font-weight: 600;
+}
+
+.hf-nav-link-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--hf-green);
+}
+
+/* User Display (Cloudflare Access) */
+.user-display {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.user-avatar-fallback {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--hf-green);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1.125rem;
+  flex-shrink: 0;
+}
+
+.user-greeting {
+  font-size: 0.9375rem;
+  color: var(--hf-navy);
+  font-weight: 500;
+}
+
+@media (max-width: 640px) {
+  .user-greeting {
+    display: none;
+  }
+
+  .user-avatar-fallback {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/* Structural Elements */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
+  background-color: #F3F4F6; /* bg-gray-100 */
+  color: #111827; /* text-gray-900 */
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+main {
+  flex: 1;
+  transition-property: all;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 1.5rem; /* p-6 */
+  overflow-x: auto;
 }
 
-/* Header Styles */
-header {
-    background-color: #2c3e50;
-    color: white;
-    padding: 1rem 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+@media (min-width: 640px) {
+  main {
+    padding: 2rem; /* sm:p-8 */
+  }
 }
 
-header h1 {
-    margin-bottom: 0.5rem;
+/* Content container - used in some pages */
+.content-container {
+  max-width: 64rem; /* max-w-5xl */
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
+/* Section Base Styling */
+section.content-section,
+section.title-section {
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 64rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.5rem;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-nav a:hover {
-    color: #3498db;
-}
-
-/* Hero Section */
-.hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding: 4rem 0;
-    text-align: center;
-}
-
-.hero h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.hero p {
-    font-size: 1.2rem;
-}
-
-/* Content Sections */
 .content-section {
-    background-color: white;
-    padding: 3rem 0;
-    margin: 2rem 0;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background-color: white;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
-.content-section h2 {
-    color: #2c3e50;
-    margin-bottom: 1rem;
-    font-size: 2rem;
+.title-section {
+  background-color: transparent;
+  box-shadow: none;
 }
 
-/* Footer */
-footer {
-    background-color: #2c3e50;
-    color: white;
-    text-align: center;
-    padding: 2rem 0;
-    margin-top: 3rem;
+.first-section {
+  margin-top: 1.5rem !important;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        gap: 1rem;
-    }
-    
-    .hero h2 {
-        font-size: 1.8rem;
-    }
-    
-    .content-section {
-        margin: 1rem 0;
-        padding: 2rem 0;
-    }
+.last-section {
+  margin-bottom: 4rem !important;
+}
+
+/* ============================================
+   TYPOGRAPHY - Inside Sections Only
+   ============================================ */
+
+/* H1 - text-3xl font-bold text-blue-800 mb-2 */
+.content-section h1,
+.title-section h1 {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+  color: #243269;
+  margin-bottom: 0.5rem;
+}
+
+/* H2 - text-2xl font-bold mb-4 */
+.content-section h2,
+.title-section h2 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  color: #243269;
+  margin-bottom: 1rem;
+}
+
+/* H3 - text-xl font-semibold text-blue-900 mb-3 */
+.content-section h3,
+.title-section h3 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  color: #243269;
+  margin-bottom: 0.75rem;
+}
+
+/* H4 - text-lg font-semibold text-blue-900 mb-2 */
+.content-section h4,
+.title-section h4 {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  color: #243269;
+  margin-bottom: 0.5rem;
+}
+
+/* Paragraphs - mb-4 text-gray-700 */
+.content-section p,
+.title-section p {
+  margin-bottom: 1rem;
+  color: #374151;
+}
+
+/* Strong text */
+.content-section strong,
+.title-section strong {
+  font-weight: 600;
+}
+
+/* ============================================
+   LISTS
+   ============================================ */
+
+/* Unordered lists - list-disc list-inside pl-6 text-gray-700 space-y-2 */
+.content-section ul,
+.title-section ul {
+  list-style-type: disc;
+  list-style-position: inside;
+  padding-left: 1.5rem;
+  color: #374151;
+  margin-bottom: 1rem;
+}
+
+.content-section ul li,
+.title-section ul li {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Ordered lists - list-decimal list-inside pl-6 text-gray-800 space-y-1 */
+.content-section ol,
+.title-section ol {
+  list-style-type: decimal;
+  list-style-position: inside;
+  padding-left: 1.5rem;
+  color: #1F2937;
+  margin-bottom: 1rem;
+}
+
+.content-section ol li,
+.title-section ol li {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+/* ============================================
+   TABLES
+   ============================================ */
+
+.content-section table,
+.title-section table {
+  min-width: 100%;
+  border: 1px solid #E5E7EB;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.content-section thead,
+.title-section thead {
+  background-color: #F9FAFB;
+}
+
+.content-section th,
+.title-section th {
+  padding: 0.5rem 1rem;
+  text-align: left;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.content-section td,
+.title-section td {
+  padding: 0.75rem 1rem;
+  color: #1F2937;
+}
+
+.content-section tbody tr,
+.title-section tbody tr {
+  border-top: 1px solid #E5E7EB;
+}
+
+.content-section tbody tr:nth-child(even),
+.title-section tbody tr:nth-child(even) {
+  background-color: white;
+}
+
+/* ============================================
+   COLLAPSIBLE SECTIONS
+   ============================================ */
+
+.collapsible-header {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+  transition: color 0.2s;
+}
+
+.collapsible-header:hover {
+  color: var(--hf-green);
+}
+
+.collapse-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+  color: var(--hf-green);
+}
+
+.collapse-icon.rotated {
+  transform: rotate(-90deg);
+}
+
+.collapsible-content {
+  max-height: 5000px;
+  overflow: visible;
+  transition: max-height 0.4s ease, opacity 0.3s ease, margin-top 0.3s ease;
+  opacity: 1;
+  margin-top: 1rem;
+}
+
+.collapsible-content.collapsed {
+  max-height: 0;
+  opacity: 0;
+  margin-top: 0 !important;
+  overflow: hidden;
+}
+
+/* ============================================
+   DOCUMENTATION CARDS (for index.html)
+   ============================================ */
+
+/* Card grid container */
+.doc-card-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .doc-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .doc-card-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .doc-card-grid-2col {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .doc-card-grid-4col {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* Individual card */
+.doc-card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid #E5E7EB;
+  transition-property: all;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.doc-card:hover {
+  border-color: var(--hf-green);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Card header (icon + title) */
+.doc-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Card icon/SVG */
+.doc-card-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--hf-green);
+  transition: transform 200ms;
+  flex-shrink: 0;
+}
+
+.doc-card:hover .doc-card-icon {
+  transform: scale(1.1);
+}
+
+/* Card title */
+.doc-card-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #243269;
+  margin: 0;
+}
+
+/* Card description */
+.doc-card-description {
+  font-size: 0.875rem;
+  color: #4B5563;
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+}
+
+/* ============================================
+   COMPACT LINK CARDS (for external software/services)
+   ============================================ */
+
+.link-card {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #E5E7EB;
+  transition: all 200ms;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.link-card:hover {
+  border-color: var(--hf-green);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.link-card-icon {
+  width: 2rem;
+  height: 2rem;
+  color: var(--hf-green);
+  transition: transform 200ms;
+  object-fit: contain;
+}
+
+.link-card:hover .link-card-icon {
+  transform: scale(1.1);
+}
+
+.link-card-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--hf-navy);
+  margin: 0;
+}
+
+.help-link-card {
+  background-color: #FFFBEB;
+  border-color: #FEF3C7;
+}
+
+.help-link-card .link-card-icon {
+  color: #D97706;
+}
+
+.help-link-card .link-card-title {
+  color: #92400E;
+}
+
+/* Form Cards (for Airtable forms) */
+.form-card {
+  /* Inherits from .link-card */
+}
+
+/* Make last form card span full width if it's alone on a row */
+@media (min-width: 640px) {
+  #forms-grid .form-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ============================================
+   LINKS
+   ============================================ */
+
+.content-section a,
+.title-section a {
+  color: var(--hf-green);
+  text-decoration: none;
+}
+
+.content-section a:hover,
+.title-section a:hover {
+  text-decoration: underline;
+  color: var(--hf-navy);
+}
+
+/* ============================================
+   FIGURES & IMAGES
+   ============================================ */
+
+.content-section figure,
+.title-section figure {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.content-section figure img,
+.title-section figure img {
+  max-width: 48rem; /* max-w-3xl */
+  border: 1px solid #D1D5DB; /* border-gray-300 */
+  border-radius: 0.25rem; /* rounded */
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); /* shadow */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content-section figcaption,
+.title-section figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: #4B5563;
+  text-align: center;
 }
