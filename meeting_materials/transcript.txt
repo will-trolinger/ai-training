@@ -1,0 +1,148 @@
+Recorder: William Trolinger
+Timezone: America/Chicago
+Start: 2025-11-24 12:34:29.223000-06:00
+End: 2025-11-24 12:51:44.435000-06:00
+
+[1s] Speaker 1: them just thinking of how they could use AI in their jobs, because some of them already do. Maybe a third of them, and others have just no idea where to go or where to start really.
+[13s] Speaker 1: I feel like ages ago I probably sent you this little table that Stimuli created live because they came and sat in for all of our training conference for them to better understand what our advisors do and how their tool fits into that work.
+[35s] Speaker 1: Informing students X, Y, and Z, so they created that table after sitting in on the conference and gave it to them, like this is where this could fit in for you.
+[55s] Speaker 1: It's not, but it's probably a four-year-old at the same time.
+[65s] Speaker 1: I think it's literally just like a black and white, super elementary table.
+[82s] Speaker 2: What if it's in this chain? Oh, it is.
+[90s] Speaker 2: Yes, definitely.
+[90s] Speaker 1: There we go. Yes. Why?
+[96s] Speaker 1: Okay, keep scrolling down.
+[99s] Speaker 2: Further down.
+[104s] Speaker 1: Yes, here we go. Because tool name, how it can help.
+[111s] Speaker 1: So I was thinking we could just base it from them, even if they have seen that video one time, do or don't remember it. I'll share with you some of the things that I know some of the advisors have already used it for and have said to me like, wow, this is so helpful, because what I think would be helpful from your point of view is how many of them are free. I think obviously a big piece of it is saying, I'm going to put a link in the chat and this is ChatGPT, this is what it does, this is where its information comes from.
+[154s] Speaker 1: Then, like follow along with it, click the link in the chat and create a username or if you already have an account, great, we're going to work through this prompt and this is what it will help you do so you can show them here is the output and here is your product.
+[176s] Speaker 1: Yeah, and maybe doing that with two or three that we know are free and we know can help with their work burden, workload, efficiency, that kind of piece of it.
+[198s] Speaker 1: Because I think majority of them, for the three or four who have been in it, I think they're only using ChatGPT. I do think they only know of ChatGPT.
+[205s] Speaker 1: So I think that's the piece, just for them, and it's not that they need to be pushed and forced to use something that doesn't feel user-friendly to them or if it doesn't seem necessary.
+[220s] Speaker 1: But because we're having this whole Stimuli conversation, I want the advisors to just understand a little bit more what AI does.
+[228s] Speaker 2: Yeah.
+[231s] Speaker 2: No, I completely agree.
+[234s] Speaker 2: Also, there are tons of free ones. Gemini is pretty pro-planned for students.
+[240s] Speaker 1: Yeah.
+[241s] Speaker 2: That's one where it's like, I don't know about teachers. I know there's the R ones with teachers.
+[241s] Speaker 1: Yeah.
+[244s] Speaker 1: Yeah, and I think that would be good for you to share with them as well.
+[253s] Speaker 1: If they're on one thing and then understanding that students may have an opportunity to have a free account to better understand and like jack around with their education so they can advocate for it.
+[264s] Speaker 1: So that if they knew there are students who are willing and interested in engaging with it, then hey, Tommy, know that this is free and you can go home and mess with it and be more equipped, come back to me doing these random searches and then we can reflect on it for whatever you found for job applications or whatever.
+[287s] Speaker 2: Yeah.
+[290s] Speaker 2: And, like, I mean...
+[293s] Speaker 2: Are all your schools, like all kids are given a device, correct?
+[297s] Speaker 1: Almost all of them except like two, Hampton, which is in I think Calhoun County, and then Lafayette County.
+[311s] Speaker 1: That's by Hope. They don't have Chromebooks assigned to each student, they have them in a cart they can check out. Her assignment essentially, like one of those schools still does a lot of paper pencil assignments.
+[335s] Speaker 2: But a computer, like the kids at least have, or the teacher.
+[338s] Speaker 1: Are accessible. One of those advisors without the technology piece now has three Chromebooks in her office because students otherwise have to be in a homeroom or be in their senior seminar to check out a Chromebook to then bring it.
+[350s] Speaker 2: Yeah, because they can't have phones, right? So it's not like a kid could use...
+[354s] Speaker 1: Yeah, like you can't have Gemini on your phone to then do something with it because your phone's locked up.
+[359s] Speaker 2: Yeah.
+[362s] Speaker 2: That's fine.
+[365s] Speaker 2: ChatGPT looks like it is free for teachers.
+[368s] Speaker 1: Yeah. I recently saw that. Maybe like Wednesday of last week.
+[372s] Speaker 2: Looks like they might have announced that.
+[376s] Speaker 1: Yeah.
+[376s] Speaker 2: The date of that is November 19th.
+[379s] Speaker 1: Or Thursday. It was whenever I left. I was on the road on seat in school so honestly...
+[385s] Speaker 2: I need to show that to my mom, actually.
+[387s] Speaker 1: Yeah, you should.
+[390s] Speaker 1: I'm thinking probably like 40 minutes. Does that feel like a good amount of time to talk through?
+[399s] Speaker 2: Yeah, I mean, I think I could also run a few polls in the chat if it's going to be in the Zoom, right? Many people?
+[407s] Speaker 1: It's all Zoom. There's 11 advisors.
+[409s] Speaker 2: Okay. Yeah, run a few polls, figure out who's used what, what they've used, how they could see themselves using it.
+[418s] Speaker 1: Yeah.
+[418s] Speaker 2: And then understanding those things and getting people more comfortable, I think is just really the start.
+[427s] Speaker 1: Yeah. So the examples so far from a few who I know use it and rely on it really well was one advisor using it for an event planning timeline.
+[440s] Speaker 1: Career fair, there's 40 businesses. This is the timing you need for opening the gym, for setting up tables, for asking businesses to arrive.
+[455s] Speaker 1: This is the time walking for junior class. This is the time walking for senior class. This is lunch. This is breakdown.
+[464s] Speaker 1: Exit a building like it runs deep walls, yeah, to the minute where she hates event planning, she is not detail-oriented, and she will say those things of like, this now gave me the simplest path forward.
+[476s] Speaker 2: Yeah, all she's got to do is follow this.
+[478s] Speaker 1: Now I just need to tweak this to our metal schedule and it's gonna—like, that is super.
+[485s] Speaker 2: That's a super easy use case for someone.
+[486s] Speaker 1: Yeah, so if you ever, you know, if that needs to be something of an example—
+[491s] Speaker 2: I feel like I like that because it's not an example that's like, oh, here's how I used it for creating lesson plans and here's how I used it to grade.
+[501s] Speaker 1: Mm-hmm.
+[503s] Speaker 2: Here's how I used it to do something that might have taken time away so I could make my own lesson plans or something.
+[508s] Speaker 2: That, right?
+[509s] Speaker 1: Yeah.
+[509s] Speaker 2: It's kind of like the way to think of it.
+[512s] Speaker 1: And for these advisors—
+[515s] Speaker 2: I mean, you know.
+[516s] Speaker 1: Some of them.
+[519s] Speaker 1: I mean, everybody has their own skill set. Some people love the event planning piece, some people really love those details.
+[525s] Speaker 2: I imagine they're all kind of different backgrounds. Some of them went to education, some of them kind of just counseling.
+[529s] Speaker 1: Yeah.
+[530s] Speaker 2: Maybe or something.
+[530s] Speaker 1: Yeah. And so for some of them, it could be that connection piece of like, oh, I know this business person.
+[539s] Speaker 1: But how do I share what is rooted, is heartland forward and how I'm positioned in this job to connect students to this? It could be, "Chat, help me write an email to convey this and ask them to come be a guest speaker," because some of them—not outreach.
+[561s] Speaker 1: There's so much time in the day, and I get that. I hate reaching out more than anything. That's the biggest chunk of outreach for anyone trying to make connections in communities that don't read emails or they don't use email, you know, whatever.
+[577s] Speaker 1: That being something that could be helpful for some of them.
+[583s] Speaker 1: This takes the brain suck power of—give it three sentences and tell it to beef it up.
+[590s] Speaker 2: Yeah, then you can just use as a template for the most part.
+[593s] Speaker 1: Yes, and then one other one which was so fun and I love this side of the creativity piece, but an advisor giving—
+[605s] Speaker 1: Finding a website and finding a scavenger hunt, like, "Give me 15 questions that was a search and find from this website," the questions and the answers.
+[619s] Speaker 1: And then that becomes essentially a little lesson plan in their senior advisory hour to complete this worksheet.
+[624s] Speaker 1: From using Mufasa's website, and it did that for her.
+[631s] Speaker 1: So fun, and so of course that's the first piece of her being efficient with your time, understanding here's a creative project that would literally take hours to game plan, find the right question and answer, come up with it yourself, and then boom, it's done, which is really great.
+[652s] Speaker 1: That's the side of it that I think a lot of them, their eyes would be opened. First you have to go find the website, which is fine.
+[662s] Speaker 1: Because you need it to be fine-tuned to what your local community needs.
+[666s] Speaker 1: You go find the College of Education at SAU and then you deep dive into what number of questions, multiple choice or not, numbers based or not, whatever.
+[681s] Speaker 1: And then it's good to go.
+[684s] Speaker 1: The other piece that I—we're not in the season of this yet for the life cycle of a senior or student—but is using any piece of AI to understand job interview questions or mock interview practice or resumes.
+[701s] Speaker 2: Yeah, and especially knowing most of them nowadays have an integrated voice mode, so you can talk to ChatGPT and almost fully assimilate everything.
+[711s] Speaker 1: Like to do that to the extent of, here's how to practice a phone interview. And you literally will just be talking to a computer.
+[722s] Speaker 1: You need to practice, but we don't have the human capital for you to sit on a phone with three business owners. It cuts out that "I'm not sending an email because I don't know what to say," and the press doesn't have time for it. For them to see this as an opportunity for students to practice an interview.
+[741s] Speaker 2: Yeah, that's a good idea.
+[743s] Speaker 1: Desires for them to see this as, this cuts out on your miscommunication or the timing it takes to think of someone who's willing to volunteer an hour of their time.
+[756s] Speaker 1: All of that.
+[757s] Speaker 2: Yeah.
+[760s] Speaker 2: Yeah, that's a good idea, the interviews.
+[761s] Speaker 1: What are you thinking, off the top of your head at least, for the models that are free?
+[768s] Speaker 2: So obviously there's Chat—
+[770s] Speaker 2: I want to say Codalmost, like Jim and I had one for students.
+[778s] Speaker 2: Claude has a—
+[784s] Speaker 2: Me, what is it there?
+[792s] Speaker 2: Or I should just ask Claude, huh?
+[795s] Speaker 1: That would be great. Which of these are free?
+[812s] Speaker 1: Did our talent pipeline—
+[813s] Speaker 2: One dollar a month maybe.
+[818s] Speaker 1: Well, I'd say that's changing.
+[825s] Speaker 2: Yeah, I can consider there are some free ones. That kind of surprises me that Cod has a government program, but not for students.
+[871s] Speaker 2: If the Canva stuff is free as students, I've heard—like, I haven't used it personally a lot, but I've heard for making presentations, some of their new AI stuff makes it super easy to make presentations.
+[884s] Speaker 1: I use Canva for flyers and early presentations, but I could see how that would be helpful.
+[890s] Speaker 2: Yeah.
+[893s] Speaker 1: Honestly, that could be critical to share with the advisors because some of them use Canva to make presentations.
+[899s] Speaker 2: Yeah.
+[900s] Speaker 1: So maybe telling them how, because not all of them use Canva, but we've highlighted that as a free tool if they would make an account or whatever, is understanding that Canva has an AI integration piece if they were interested in using it.
+[920s] Speaker 2: That might help them out.
+[922s] Speaker 1: Might help. Do you know how specifically? Like, is it I would upload a Word doc of my speaking points and it puts it in—
+[932s] Speaker 2: That I'm not entirely sure.
+[933s] Speaker 1: You see what I'm saying? Like, I wonder.
+[938s] Speaker 1: Okay, now that topic is dying.
+[941s] Speaker 2: Yeah, I haven't really found an AI tool that's great at making presentations. I've found that any of them are pretty decent at taking things and giving you your bullets.
+[956s] Speaker 2: If they prompt them separately, you can generate PowerPoints through this VBA code.
+[962s] Speaker 1: Mm-hmm.
+[962s] Speaker 2: And so ChatGPT can write that.
+[967s] Speaker 1: Oh, okay.
+[967s] Speaker 2: And generate them that way. It's just kind of like if you don't have the pro version downloaded on your computer, you can't get to where you can run the code that will actually generate the PowerPoint in PowerPoint.
+[976s] Speaker 1: Yeah.
+[976s] Speaker 2: So it's kind of finicky on offering that as a solution for people.
+[980s] Speaker 1: We will absolutely not because so many of these people—
+[983s] Speaker 2: Yeah, they won't.
+[985s] Speaker 1: No, no,
+[986s] Speaker 2: It took me a while to learn that.
+[987s] Speaker 1: That is beyond.
+[990s] Speaker 1: That is beyond this conversation. That feels like a level 400 class. We are at 99 right now. We're not even at 101.
+[998s] Speaker 2: Yeah, I need to make a custom GPT for that. Honestly,
+[1002s] Speaker 1: That would be so fun.
+[1003s] Speaker 2: Our heart went forward.
+[1006s] Speaker 2: Yeah. Presentation.
+[1010s] Speaker 3: Amazon now also has gamified AI marketing.
+[1016s] Speaker 2: Nice.
+[1017s] Speaker 3: They're focusing mostly on cloud computing to start and then after with some interactive AI.
+[1023s] Speaker 1: Okay.
+[1024s] Speaker 3: But I tell you what, it does look too different.
+[1027s] Speaker 1: Here it does it!
+[1030s] Speaker 3: I like click their link.
