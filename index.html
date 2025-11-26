@@ -3,60 +3,846 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AI Training Resources for Heartland Forward Career Coaches">
-    <title>AI Training - Heartland Forward Career Coaches</title>
+    <meta name="description" content="AI Training Resources for Heartland Forward Rooted Advisors - Learn to use AI tools to enhance your career coaching work.">
+    <title>AI Training - Heartland Forward Rooted Advisors</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/branding/hf-logo.svg" type="image/svg+xml">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>AI Training for Career Coaches</h1>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#resources">Resources</a></li>
-                    <li><a href="#training">Training</a></li>
-                    <li><a href="#about">About</a></li>
-                </ul>
+    <!-- Header -->
+    <header class="hf-header">
+        <div class="hf-header-container">
+            <a href="index.html" class="hf-logo-link">
+                <img src="images/branding/hf-logo.svg" alt="Heartland Forward" class="hf-logo">
+            </a>
+            <nav class="hf-nav">
+                <a href="#overview" class="hf-nav-link">Overview</a>
+                <a href="#what-is-ai" class="hf-nav-link">What is AI?</a>
+                <a href="#tools" class="hf-nav-link">Tools</a>
+                <a href="#modalities" class="hf-nav-link">Modalities</a>
+                <a href="#use-cases" class="hf-nav-link">Use Cases</a>
+                <a href="#resources" class="hf-nav-link">Resources</a>
             </nav>
         </div>
     </header>
 
     <main>
-        <section id="home" class="hero">
-            <div class="container">
-                <h2>Welcome to AI Training</h2>
-                <p>Empowering Heartland Forward rooted Career coaches with AI tools and knowledge</p>
+        <!-- ============================================
+             SECTION 1: OVERVIEW
+             ============================================ -->
+        <section id="overview" class="title-section first-section">
+            <h1>AI Training for Rooted Advisors</h1>
+            <p>Empowering you with practical AI tools to reduce administrative burden and amplify your impact with students.</p>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-header collapsible-header" data-target="welcome-content">Welcome</h2>
+            <div class="collapsible-content" id="welcome-content">
+                <p>This training is designed to be <strong>simple, approachable, and immediately useful</strong>. Whether you've never tried AI or use it occasionally, you'll leave with practical skills you can apply right away.</p>
+                <p>Our goal isn't to turn you into tech experts. It's to show you how AI can <strong>remove friction from your work</strong> and open new opportunities for your students.</p>
+
+                <h3>What You'll Learn</h3>
+                <ul>
+                    <li><strong>What AI actually is</strong> - and its key limitations you need to understand</li>
+                    <li><strong>Tools AI can use</strong> - how it searches the web, analyzes files, and runs calculations</li>
+                    <li><strong>Different ways to interact</strong> - text, voice, images, and more</li>
+                    <li><strong>Practical use cases</strong> - real examples from fellow advisors</li>
+                    <li><strong>Free tools available to you</strong> - and how to access them</li>
+                </ul>
             </div>
         </section>
 
-        <section id="resources" class="content-section">
-            <div class="container">
-                <h2>Training Resources</h2>
-                <p>Explore our comprehensive AI training materials designed specifically for career coaches.</p>
-                <!-- Content will be added here -->
+        <!-- ============================================
+             SECTION 2: WHAT IS AI?
+             ============================================ -->
+        <section id="what-is-ai" class="content-section">
+            <h2 class="section-header collapsible-header" data-target="what-is-ai-content">What is AI?</h2>
+            <div class="collapsible-content" id="what-is-ai-content">
+
+            <h3>The "Zip File of the Internet" Mental Model</h3>
+            <p>Think of Large Language Models (LLMs) like ChatGPT as a <strong>"zip file" of the internet</strong>. During training, the AI reads essentially all of the internet and compresses that knowledge into its neural network. When you ask a question, it's recalling information from this compressed knowledge base.</p>
+            <p>This compression happens through a process called <strong>pre-training</strong>, where the model learns patterns from massive amounts of text. Then, through <strong>post-training</strong>, human labelers fine-tune it to respond helpfully as an assistant.</p>
+
+            <h3>Understanding Tokens: How AI Reads Text</h3>
+            <p>AI doesn't read words the way we do. It breaks text into <strong>tokens</strong> - small chunks that can be parts of words, whole words, or punctuation. A short sentence might be 15 tokens, while a paragraph could be 50-100 tokens.</p>
+            <p>Why does this matter?</p>
+            <ul>
+                <li>Longer conversations use more tokens, which can slow things down</li>
+                <li>There's a limit to how many tokens AI can process at once (the "context window")</li>
+                <li>Understanding tokens helps you write more efficient prompts</li>
+            </ul>
+            <p><strong>Try it yourself:</strong> <a href="https://tiktokenizer.vercel.app" target="_blank" rel="noopener noreferrer">Tik Tokenizer</a> lets you see exactly how your text gets broken into tokens.</p>
+
+            <h3>The Context Window: AI's Working Memory</h3>
+            <p>When you chat with AI, you're building a <strong>one-dimensional token sequence</strong> together. Your messages + AI's responses = the conversation history. This is called the <strong>context window</strong> - it's the AI's working memory for your conversation.</p>
+            <ul>
+                <li>AI remembers everything in your current chat</li>
+                <li>When you start a <strong>new chat</strong>, you wipe that memory and start fresh</li>
+                <li>Starting fresh is often good - it keeps the AI focused on your current task</li>
+            </ul>
+            <p><strong>Tip:</strong> Start a new chat when switching to a completely different topic. This prevents the AI from being distracted by old content and can improve response quality.</p>
+
+            <h3>Probabilistic Recall: Why AI Can Be Wrong</h3>
+            <p>AI doesn't "remember" facts like a database looks up records. It <strong>probabilistically reconstructs</strong> information based on patterns. This means:</p>
+            <ul>
+                <li>It can occasionally get facts wrong (called "hallucinations")</li>
+                <li>It may sound confident even when incorrect</li>
+                <li>Common information is more reliable than obscure details</li>
+                <li><strong>Always verify important information</strong> against primary sources</li>
+            </ul>
+
+            <h3>Two Critical Limitations</h3>
+            <p>By default, when you talk to an AI, you're talking to a <strong>self-contained entity</strong>. There's no calculator, no internet connection, no access to your files - just a neural network predicting helpful responses based on its compressed knowledge. This creates two important limitations:</p>
+
+            <div style="background-color: #FEF3C7; padding: 1.5rem; border-radius: 0.5rem; margin: 1rem 0; border-left: 4px solid #F59E0B;">
+                <h4 style="margin-top: 0; color: #92400E;">1. Knowledge Cutoff Dates</h4>
+                <p>AI models are trained at a specific point in time. They don't automatically know about:</p>
+                <ul style="margin-bottom: 0;">
+                    <li>Recent news or events</li>
+                    <li>New company policies or job postings</li>
+                    <li>Updated salary information</li>
+                    <li>Current market conditions</li>
+                </ul>
+            </div>
+
+            <div style="background-color: #FEF3C7; padding: 1.5rem; border-radius: 0.5rem; margin: 1rem 0; border-left: 4px solid #F59E0B;">
+                <h4 style="margin-top: 0; color: #92400E;">2. Niche Information Gaps</h4>
+                <p>AI excels at common knowledge but struggles with specialized, local information:</p>
+                <ul style="margin-bottom: 0;">
+                    <li>Specific company cultures and hiring practices</li>
+                    <li>Local job market conditions</li>
+                    <li>Regional employer preferences</li>
+                    <li>Your specific school's policies</li>
+                </ul>
+            </div>
+
+            <p style="font-size: 1.125rem; margin-top: 1.5rem;"><strong>The good news?</strong> These limitations have solutions. Modern AI tools come equipped with <strong>additional capabilities</strong> that extend what they can do far beyond their base training...</p>
             </div>
         </section>
 
-        <section id="training" class="content-section">
-            <div class="container">
-                <h2>Training Modules</h2>
-                <p>Interactive learning modules to enhance your AI capabilities.</p>
-                <!-- Content will be added here -->
+        <!-- ============================================
+             SECTION 3: TOOLS AI CAN USE
+             ============================================ -->
+        <section id="tools" class="content-section">
+            <h2 class="section-header collapsible-header" data-target="tools-content">Tools AI Can Use</h2>
+            <div class="collapsible-content" id="tools-content">
+            <p>Modern AI isn't limited to just its training knowledge. It can use <strong>external tools</strong> to search the web, run calculations, analyze files, and more. Understanding these tools helps you get much better results.</p>
+
+            <!-- Web Search -->
+            <h3>Internet Search</h3>
+            <p>Remember the knowledge cutoff problem? <strong>Web search</strong> solves this by letting AI access current information from the internet in real-time.</p>
+
+            <div style="background-color: #F0FDF4; padding: 1.5rem; border-radius: 0.5rem; margin: 1rem 0; border-left: 4px solid var(--hf-green);">
+                <h4 style="margin-top: 0;">How It Works</h4>
+                <ol>
+                    <li>You ask a question that needs current information</li>
+                    <li>The AI emits a special "search the internet" signal</li>
+                    <li>It searches the web and loads relevant pages into its context</li>
+                    <li>It synthesizes an answer from those fresh sources</li>
+                </ol>
+            </div>
+
+            <p><strong>When to use search:</strong></p>
+            <ul>
+                <li>"When are the registration deadlines for [college]?"</li>
+                <li>"What's the current average salary for medical assistants in Arkansas?"</li>
+                <li>"What companies are hiring in [city] right now?"</li>
+                <li>Any question where the answer might have changed recently</li>
+            </ul>
+
+            <p><strong>Tools with search:</strong></p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tool</th>
+                        <th>Search Capability</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Perplexity</strong></td>
+                        <td>Built specifically for search - always searches and cites sources</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ChatGPT</strong></td>
+                        <td>Has web search (automatic or manual toggle)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Gemini</strong></td>
+                        <td>Integrated with Google search</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Claude</strong></td>
+                        <td>Web search available (added in 2025)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p><strong>Tip:</strong> When you know you need current information, explicitly ask for a search or use Perplexity, rather than hoping the model auto-detects the need.</p>
+
+            <!-- Deep Research -->
+            <h3>Deep Research Mode</h3>
+            <p>For complex questions, some AI tools offer <strong>Deep Research</strong> - a combination of internet search and extended thinking that runs for 5-15+ minutes. The AI:</p>
+            <ul>
+                <li>Issues <strong>many internet searches</strong> across different angles</li>
+                <li>Reads through papers, articles, and documents</li>
+                <li>Thinks deeply about the information</li>
+                <li>Produces a <strong>comprehensive report with citations</strong></li>
+            </ul>
+
+            <p><strong>Great for:</strong></p>
+            <ul>
+                <li>Industry analysis for career exploration</li>
+                <li>Deep company research (culture, growth, opportunities)</li>
+                <li>Comparing programs, certifications, or schools</li>
+                <li>Understanding emerging career fields</li>
+            </ul>
+
+            <div style="background-color: #FEF3C7; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0;">
+                <p style="margin: 0;"><strong>Important caveat:</strong> Even Deep Research can miss things or make mistakes. Treat the output as a <strong>well-researched first draft</strong>, not ground truth. Always follow up on citations for critical decisions.</p>
+            </div>
+
+            <!-- Code/Python Interpreter -->
+            <h3>Code Execution (Python Interpreter)</h3>
+            <p>LLMs can recognize problems they can't solve "in their head" and write programs to calculate the answer instead.</p>
+
+            <p><strong>Simple math</strong> (30 x 9): The model calculates in its head - works fine.</p>
+            <p><strong>Complex calculations</strong> (large numbers, statistics): The model writes Python code, runs it, and returns the accurate result.</p>
+
+            <p><strong>What this enables:</strong></p>
+            <ul>
+                <li><strong>Data analysis</strong> - Upload a spreadsheet, ask for insights</li>
+                <li><strong>Creating charts and graphs</strong> - Visualize trends</li>
+                <li><strong>Accurate calculations</strong> - No estimation errors</li>
+                <li><strong>Processing files</strong> - Extract and transform data</li>
+            </ul>
+
+            <div style="background-color: #FEF3C7; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0;">
+                <p style="margin: 0;"><strong>Warning:</strong> Not all AI tools have code execution. If a model doesn't have calculator access, it will still try to answer math questions and may give plausible-looking but <strong>incorrect</strong> results. Always verify numerical calculations for important work.</p>
+            </div>
+
+            <!-- File Uploads -->
+            <h3>File Uploads</h3>
+            <p>You can upload documents directly to AI tools and ask questions about them. The content gets converted to tokens and loaded into the context window.</p>
+
+            <p><strong>Supported file types:</strong></p>
+            <ul>
+                <li><strong>PDFs</strong> - Reports, articles, handouts, research papers</li>
+                <li><strong>Word documents</strong> - Drafts, policies, lesson plans</li>
+                <li><strong>Spreadsheets</strong> - Data for analysis</li>
+                <li><strong>Images</strong> - Screenshots, diagrams, photos of text</li>
+                <li><strong>Code files</strong> - For technical users</li>
+            </ul>
+
+            <p><strong>Practical uses for advisors:</strong></p>
+            <ul>
+                <li>Upload a confusing policy document: "Summarize the key points"</li>
+                <li>Share a student's resume draft: "What improvements would you suggest?"</li>
+                <li>Upload a job posting: "What skills should a student highlight for this role?"</li>
+                <li>Share a research paper: "Explain the main findings in simple terms"</li>
+            </ul>
+
+            <p><strong>Two-step best practice:</strong></p>
+            <ol>
+                <li>First, ask the model to transcribe/extract the key information</li>
+                <li>Verify the extraction is correct</li>
+                <li>Then ask your analytical questions</li>
+            </ol>
+            <p>This ensures the model actually "saw" the content correctly before you trust its analysis.</p>
+
+            <!-- Tools Summary -->
+            <h3>Tools Summary</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tool</th>
+                        <th>What It Does</th>
+                        <th>When to Use</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Web Search</strong></td>
+                        <td>Accesses current internet information</td>
+                        <td>Current events, recent data, fact-checking</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Deep Research</strong></td>
+                        <td>Extended multi-search investigation</td>
+                        <td>Complex research requiring synthesis</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Code Execution</strong></td>
+                        <td>Runs Python for calculations/analysis</td>
+                        <td>Math, data analysis, creating charts</td>
+                    </tr>
+                    <tr>
+                        <td><strong>File Upload</strong></td>
+                        <td>Analyzes documents you provide</td>
+                        <td>Reviewing documents, extracting info</td>
+                    </tr>
+                </tbody>
+            </table>
             </div>
         </section>
 
-        <section id="about" class="content-section">
-            <div class="container">
-                <h2>About</h2>
-                <p>This platform is dedicated to supporting Heartland Forward rooted Career coaches in their journey to integrate AI into their practice.</p>
+        <!-- ============================================
+             SECTION 4: MODALITIES
+             ============================================ -->
+        <section id="modalities" class="content-section">
+            <h2 class="section-header collapsible-header" data-target="modalities-content">Modalities: Different Ways to Interact with AI</h2>
+            <div class="collapsible-content" id="modalities-content">
+            <p>AI isn't limited to text anymore. Modern LLMs can work with <strong>multiple modalities</strong> - different types of input and output including text, voice, and images.</p>
+
+            <!-- Text -->
+            <h3>Text (The Default)</h3>
+            <p>Text is the foundation of AI interaction. You type a message, the AI responds with text. This is what most people think of when they imagine using ChatGPT or similar tools.</p>
+            <p><strong>Best for:</strong> Most tasks - writing, planning, brainstorming, explaining, analyzing.</p>
+
+            <!-- Voice Input/Output -->
+            <h3>Voice: Speech Input and Output</h3>
+
+            <h4>Speech-to-Text Input</h4>
+            <p>Instead of typing, you can speak your questions and the AI transcribes them:</p>
+            <ul>
+                <li><strong>On mobile:</strong> Tap the microphone icon, speak your query</li>
+                <li><strong>On desktop:</strong> Some tools have built-in voice; others work with system apps like SuperWhisper or Whisper Flow</li>
+            </ul>
+            <p><strong>Why it matters:</strong> Voice input is much faster for many people. Some power users report 50-80% of their queries are voice rather than typed.</p>
+
+            <h4>Text-to-Speech Output</h4>
+            <p>Most AI apps have a "Read Aloud" feature to speak responses back to you. Useful for accessibility or when you want to listen while doing something else.</p>
+
+            <h4>Advanced Voice Mode (Real Conversations)</h4>
+            <p>Tools like ChatGPT have <strong>Advanced Voice Mode</strong> that handles audio natively - not just speech-to-text-to-speech, but actual audio processing:</p>
+            <ul>
+                <li>Real-time conversation with very low latency</li>
+                <li>Natural back-and-forth like talking to a person</li>
+                <li>Can express emotion and engagement</li>
+            </ul>
+
+            <div style="background-color: #F0FDF4; padding: 1.5rem; border-radius: 0.5rem; margin: 1rem 0; border-left: 4px solid var(--hf-green);">
+                <h4 style="margin-top: 0;">Student Use Case: Mock Interview Practice</h4>
+                <p style="margin-bottom: 0;">This is perfect for students who need interview practice. They can:</p>
+                <ul style="margin-bottom: 0;">
+                    <li>Practice phone-style interviews on their own time</li>
+                    <li>Get unlimited repetitions without scheduling hassles</li>
+                    <li>Practice at home where they have phone access</li>
+                    <li>Receive feedback after the conversation</li>
+                </ul>
+            </div>
+
+            <!-- Image Input -->
+            <h3>Image Input: Seeing and Analyzing</h3>
+            <p>AI can "see" images you upload - photos, screenshots, diagrams, documents. The image gets converted into tokens (through a process of breaking it into patches) and the AI can analyze what it sees.</p>
+
+            <p><strong>Practical examples:</strong></p>
+            <ul>
+                <li><strong>Nutrition labels or documents:</strong> Upload a photo, get a breakdown of contents</li>
+                <li><strong>Screenshots:</strong> Share what's on your screen, ask questions about it</li>
+                <li><strong>Math from papers:</strong> Screenshot an equation, get it explained or solved</li>
+                <li><strong>Handwritten notes:</strong> Upload a photo, get it transcribed</li>
+                <li><strong>Confusing memes:</strong> Upload an image, get the joke explained</li>
+            </ul>
+
+            <p><strong>For advisors:</strong> Take a photo of a flyer, event schedule, or document and ask "What are the key details here?" or "Create a summary I can share with students."</p>
+
+            <!-- Image Output -->
+            <h3>Image Output: Generation</h3>
+            <p>AI can also <strong>create</strong> images based on your descriptions. ChatGPT has native image generation built in.</p>
+
+            <p><strong>Use cases:</strong></p>
+            <ul>
+                <li>Creating simple graphics or icons</li>
+                <li>Thumbnails for presentations</li>
+                <li>Visual aids for lessons</li>
+                <li>Creative content</li>
+            </ul>
+
+            <p><strong>For most visual work,</strong> Canva is still the better choice - it's designed for creating polished materials. But AI image generation is useful for quick visuals or when you need something specific that doesn't exist in templates.</p>
+
+            <!-- Video -->
+            <h3>Video Input: Point and Talk</h3>
+            <p>On mobile, ChatGPT's Advanced Voice Mode can use your camera in real-time:</p>
+            <ul>
+                <li>Point your camera at something</li>
+                <li>Ask questions about what you're showing</li>
+                <li>Get responses while the camera is active</li>
+            </ul>
+            <p>This is newer and still evolving, but it opens interesting possibilities for real-time assistance.</p>
+
+            <!-- Modalities Summary -->
+            <h3>Modalities Summary</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Modality</th>
+                        <th>What It Is</th>
+                        <th>Best For</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Text</strong></td>
+                        <td>Type questions, get written responses</td>
+                        <td>Most tasks - the default</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Voice Input</strong></td>
+                        <td>Speak instead of type</td>
+                        <td>Quick queries, mobile use, accessibility</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Voice Conversation</strong></td>
+                        <td>Real-time back-and-forth talking</td>
+                        <td>Mock interviews, brainstorming, learning</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Image Input</strong></td>
+                        <td>Upload photos for analysis</td>
+                        <td>Documents, screenshots, visual questions</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Image Output</strong></td>
+                        <td>AI generates images</td>
+                        <td>Quick graphics, visual aids</td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </section>
+
+        <!-- ============================================
+             SECTION 5: FREE AI PLATFORMS
+             ============================================ -->
+        <section class="content-section">
+            <h2 class="section-header collapsible-header" data-target="platforms-content">Free AI Platforms for Advisors</h2>
+            <div class="collapsible-content" id="platforms-content">
+            <p>Now that you understand what AI can do, here are the platforms you can use - all accessible on school Chromebooks with free educational access.</p>
+
+            <div class="doc-card-grid doc-card-grid-2col" style="margin-top: 1.5rem;">
+                <!-- ChatGPT Card -->
+                <a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer" class="doc-card" style="text-decoration: none;">
+                    <div class="doc-card-header">
+                        <img src="images/logos/chatgpt.svg" alt="ChatGPT" class="doc-card-icon" style="width: 2rem; height: 2rem;">
+                        <h3 class="doc-card-title" style="margin: 0;">ChatGPT</h3>
+                    </div>
+                    <p class="doc-card-description"><strong>100% FREE for K-12 Teachers (US) through June 2027!</strong> Most comprehensive: web search, code execution, file uploads, image generation, Advanced Voice Mode. Verify via SheerID.</p>
+                </a>
+
+                <!-- Gemini Card -->
+                <a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer" class="doc-card" style="text-decoration: none;">
+                    <div class="doc-card-header">
+                        <svg class="doc-card-icon" style="width: 2rem; height: 2rem;" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                        <h3 class="doc-card-title" style="margin: 0;">Google Gemini</h3>
+                    </div>
+                    <p class="doc-card-description"><strong>FREE for all Google Workspace for Education users.</strong> Integrated Google search, works with Docs/Sheets/Gmail. Automatic access if your school uses Google Workspace.</p>
+                </a>
+
+                <!-- Canva Card -->
+                <a href="https://www.canva.com/education/" target="_blank" rel="noopener noreferrer" class="doc-card" style="text-decoration: none;">
+                    <div class="doc-card-header">
+                        <svg class="doc-card-icon" style="width: 2rem; height: 2rem;" viewBox="0 0 24 24" fill="currentColor">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="8.5" cy="8.5" r="1.5"/>
+                            <path d="M21 15l-5-5L5 21"/>
+                        </svg>
+                        <h3 class="doc-card-title" style="margin: 0;">Canva for Education</h3>
+                    </div>
+                    <p class="doc-card-description"><strong>100% FREE FOREVER for K-12.</strong> AI-powered design tools, millions of templates. Best for visual content: flyers, presentations, graphics. Verify with school email.</p>
+                </a>
+
+                <!-- Perplexity Card -->
+                <a href="https://www.perplexity.ai/" target="_blank" rel="noopener noreferrer" class="doc-card" style="text-decoration: none;">
+                    <div class="doc-card-header">
+                        <img src="images/logos/perplexity.svg" alt="Perplexity" class="doc-card-icon" style="width: 2rem; height: 2rem;">
+                        <h3 class="doc-card-title" style="margin: 0;">Perplexity</h3>
+                    </div>
+                    <p class="doc-card-description"><strong>Free basic tier for everyone.</strong> Built specifically for web search - always cites sources. Best for research, current information, and fact-checking.</p>
+                </a>
+            </div>
+
+            <h3 style="margin-top: 2rem;">Which Platform for Which Task?</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>If you need to...</th>
+                        <th>Use this</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Write or edit emails, documents, communications</td>
+                        <td>ChatGPT or Gemini</td>
+                    </tr>
+                    <tr>
+                        <td>Research current information with sources</td>
+                        <td>Perplexity</td>
+                    </tr>
+                    <tr>
+                        <td>Create visual materials (flyers, presentations)</td>
+                        <td>Canva</td>
+                    </tr>
+                    <tr>
+                        <td>Practice mock interviews with voice</td>
+                        <td>ChatGPT (mobile app)</td>
+                    </tr>
+                    <tr>
+                        <td>Analyze a document or resume</td>
+                        <td>ChatGPT</td>
+                    </tr>
+                    <tr>
+                        <td>Work within Google Workspace</td>
+                        <td>Gemini</td>
+                    </tr>
+                    <tr>
+                        <td>Create a timeline or event plan</td>
+                        <td>ChatGPT</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 style="margin-top: 2rem;">Educational Access Summary</h3>
+            <p><em>Information current as of November 2025.</em></p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Platform</th>
+                        <th>K-12 Teachers</th>
+                        <th>K-12 Students</th>
+                        <th>How to Access</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>ChatGPT</strong></td>
+                        <td style="color: var(--hf-green); font-weight: bold;">FREE (US, until June 2027)</td>
+                        <td>Via school districts</td>
+                        <td>SheerID verification at chatgpt.com</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Google Gemini</strong></td>
+                        <td style="color: var(--hf-green); font-weight: bold;">FREE</td>
+                        <td style="color: var(--hf-green); font-weight: bold;">FREE</td>
+                        <td>Automatic with Workspace for Education</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Canva</strong></td>
+                        <td style="color: var(--hf-green); font-weight: bold;">FREE forever</td>
+                        <td style="color: var(--hf-green); font-weight: bold;">FREE forever</td>
+                        <td>canva.com/education - school email or credentials</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Perplexity</strong></td>
+                        <td>Free basic tier</td>
+                        <td>Free basic tier</td>
+                        <td>perplexity.ai - no verification needed</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Microsoft Copilot</strong></td>
+                        <td style="color: var(--hf-green); font-weight: bold;">FREE</td>
+                        <td style="color: var(--hf-green); font-weight: bold;">FREE (13+)</td>
+                        <td>Automatic with Microsoft 365 Education</td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </section>
+
+        <!-- ============================================
+             SECTION 6: USE CASES
+             ============================================ -->
+        <section id="use-cases" class="content-section">
+            <h2 class="section-header collapsible-header" data-target="use-cases-content">Real Use Cases from Rooted Advisors</h2>
+            <div class="collapsible-content" id="use-cases-content">
+            <p>These examples come directly from advisors who are already using AI to make their work easier.</p>
+
+            <!-- Event Planning -->
+            <div style="background-color: #F9FAFB; padding: 1.5rem; border-radius: 0.5rem; margin: 1.5rem 0; border-left: 4px solid var(--hf-green);">
+                <h3 style="margin-top: 0;">1. Event Planning Timelines</h3>
+                <p><strong>The Challenge:</strong> An advisor needed to plan a career fair with 40 businesses. She admits she "hates event planning" and isn't detail-oriented.</p>
+                <p><strong>The Solution:</strong> She asked ChatGPT to create a complete event timeline. The AI generated:</p>
+                <ul>
+                    <li>Setup windows and vendor arrival times</li>
+                    <li>Junior and senior class walkthrough schedules</li>
+                    <li>Lunch periods and breakdown logistics</li>
+                    <li>Building exit procedures</li>
+                </ul>
+                <p><strong>The Result:</strong> "This now gave me the simplest path forward. I just needed to tweak it to our bell schedule."</p>
+                <p style="margin-bottom: 0;"><strong>Why it works:</strong> AI handles the tedious details so you can focus on what matters most.</p>
+            </div>
+
+            <!-- Outreach Emails -->
+            <div style="background-color: #F9FAFB; padding: 1.5rem; border-radius: 0.5rem; margin: 1.5rem 0; border-left: 4px solid var(--hf-green);">
+                <h3 style="margin-top: 0;">2. Outreach Emails and Communication</h3>
+                <p><strong>The Challenge:</strong> Reaching out to businesses, explaining Rooted, and inviting speakers takes significant mental energy and time.</p>
+                <p><strong>The Solution:</strong> Give AI a few sentences about what you want to say, and ask it to write a professional email.</p>
+                <ul>
+                    <li>Turn 2-3 bullet points into a complete, professional message</li>
+                    <li>Rephrase, shorten, or formalize existing drafts</li>
+                    <li>Create reusable templates for recurring outreach</li>
+                </ul>
+                <p><strong>The Result:</strong> "This takes the brain suck power out of it. Give it three sentences and tell it to beef it up."</p>
+                <p style="margin-bottom: 0;"><strong>Why it works:</strong> Removes the friction of "what do I say?" so you actually send those important emails.</p>
+            </div>
+
+            <!-- Scavenger Hunts -->
+            <div style="background-color: #F9FAFB; padding: 1.5rem; border-radius: 0.5rem; margin: 1.5rem 0; border-left: 4px solid var(--hf-green);">
+                <h3 style="margin-top: 0;">3. Website Scavenger Hunts and Activities</h3>
+                <p><strong>The Challenge:</strong> Creating engaging activities that connect to local resources takes hours of planning.</p>
+                <p><strong>The Solution:</strong> An advisor found a local community website and asked AI to create a scavenger hunt from it.</p>
+                <ul>
+                    <li>15 search-and-find questions generated instantly</li>
+                    <li>Complete answer key included</li>
+                    <li>Options for multiple choice or open-ended formats</li>
+                </ul>
+                <p><strong>The Result:</strong> "A creative project that would literally take hours to game plan... boom, it's done."</p>
+                <p style="margin-bottom: 0;"><strong>Why it works:</strong> Your local knowledge + AI's speed = activities that actually connect to your community.</p>
+            </div>
+
+            <!-- Mock Interviews -->
+            <div style="background-color: #F9FAFB; padding: 1.5rem; border-radius: 0.5rem; margin: 1.5rem 0; border-left: 4px solid var(--hf-green);">
+                <h3 style="margin-top: 0;">4. Mock Interview Practice (Voice Mode)</h3>
+                <p><strong>The Challenge:</strong> Students need interview practice, but advisors lack time for one-on-one sessions and business partners can't always volunteer.</p>
+                <p><strong>The Solution:</strong> AI tools with voice mode can simulate phone interviews. Students can practice anytime.</p>
+                <ul>
+                    <li>ChatGPT's Advanced Voice Mode supports real conversations</li>
+                    <li>Students practice without scheduling constraints</li>
+                    <li>Unlimited practice opportunities</li>
+                </ul>
+                <p><strong>The Result:</strong> "This cuts out the miscommunication and timing it takes to find someone willing to volunteer an hour."</p>
+                <p style="margin-bottom: 0;"><strong>Why it works:</strong> Students get the practice they need, when they need it.</p>
+            </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             SECTION 7: PROMPTS
+             ============================================ -->
+        <section id="prompts" class="content-section">
+            <h2 class="section-header collapsible-header" data-target="prompts-content">Ready-to-Use Prompts</h2>
+            <div class="collapsible-content" id="prompts-content">
+            <p>Copy these prompts and customize them for your needs. Replace the [bracketed text] with your specific information.</p>
+
+            <!-- Event Planning Prompt -->
+            <div style="background-color: #EFF6FF; padding: 1.5rem; border-radius: 0.5rem; margin: 1.5rem 0; border: 1px solid #BFDBFE;">
+                <h3 style="margin-top: 0; color: #1E40AF;">Event Planning Timeline</h3>
+                <p style="font-family: monospace; background: white; padding: 1rem; border-radius: 0.25rem; font-size: 0.875rem; white-space: pre-wrap;">I'm planning a [career fair/event type] at [school name]. We have [number] businesses attending. The event will be in the [gym/location].
+
+Our school schedule:
+- School starts at [time]
+- Lunch periods are [times]
+- School ends at [time]
+
+Please create a detailed timeline including:
+- Setup time for staff
+- Vendor/business arrival and setup
+- Student walkthrough times by grade
+- Breakdown and cleanup
+
+Make it minute-by-minute where it matters.</p>
+            </div>
+
+            <!-- Outreach Email Prompt -->
+            <div style="background-color: #EFF6FF; padding: 1.5rem; border-radius: 0.5rem; margin: 1.5rem 0; border: 1px solid #BFDBFE;">
+                <h3 style="margin-top: 0; color: #1E40AF;">Outreach Email</h3>
+                <p style="font-family: monospace; background: white; padding: 1rem; border-radius: 0.25rem; font-size: 0.875rem; white-space: pre-wrap;">Help me write a professional email to invite a local business to [speak at our school/participate in our career fair/mentor students].
+
+Key points to include:
+- I work with Heartland Forward's Rooted program
+- We connect high school students with career opportunities
+- [Specific ask: date, time, what you need from them]
+
+Keep it friendly but professional. About 150-200 words.</p>
+            </div>
+
+            <!-- Scavenger Hunt Prompt -->
+            <div style="background-color: #EFF6FF; padding: 1.5rem; border-radius: 0.5rem; margin: 1.5rem 0; border: 1px solid #BFDBFE;">
+                <h3 style="margin-top: 0; color: #1E40AF;">Website Scavenger Hunt</h3>
+                <p style="font-family: monospace; background: white; padding: 1rem; border-radius: 0.25rem; font-size: 0.875rem; white-space: pre-wrap;">Create a scavenger hunt activity using this website: [paste URL]
+
+Generate 15 questions that students can answer by exploring the website. Include:
+- A mix of easy and challenging questions
+- Questions about careers, requirements, and opportunities
+- An answer key at the end
+
+Format it as a worksheet I can print for students.</p>
+            </div>
+
+            <!-- Mock Interview Prompt -->
+            <div style="background-color: #EFF6FF; padding: 1.5rem; border-radius: 0.5rem; margin: 1.5rem 0; border: 1px solid #BFDBFE;">
+                <h3 style="margin-top: 0; color: #1E40AF;">Mock Interview Practice</h3>
+                <p style="font-family: monospace; background: white; padding: 1rem; border-radius: 0.25rem; font-size: 0.875rem; white-space: pre-wrap;">I want you to act as an interviewer for a [job type] position at a local [industry] company.
+
+Conduct a realistic phone interview with me. Ask one question at a time, wait for my response, then give brief feedback and ask the next question.
+
+Start with an introduction and ask 5-7 common interview questions. At the end, give me overall feedback on my answers.
+
+Begin when I say "I'm ready."</p>
+            </div>
+
+            <!-- Quick Lesson Ideas -->
+            <div style="background-color: #EFF6FF; padding: 1.5rem; border-radius: 0.5rem; margin: 1.5rem 0; border: 1px solid #BFDBFE;">
+                <h3 style="margin-top: 0; color: #1E40AF;">Quick Lesson Ideas</h3>
+                <p style="font-family: monospace; background: white; padding: 1rem; border-radius: 0.25rem; font-size: 0.875rem; white-space: pre-wrap;">I have [20/30/45] minutes with [junior/senior] students. The topic is [career exploration/resume writing/interview skills/workplace communication].
+
+Give me 3 different activity ideas that:
+- Require minimal prep
+- Keep students engaged
+- Can be done with [Chromebooks/paper and pencil/no technology]
+
+Include brief instructions I can follow.</p>
+            </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             SECTION 8: BEST PRACTICES
+             ============================================ -->
+        <section class="content-section">
+            <h2 class="section-header collapsible-header" data-target="best-practices-content">Tips for Getting Better Results</h2>
+            <div class="collapsible-content" id="best-practices-content">
+
+            <h3>Be Specific</h3>
+            <p>The more context you give, the better the output. Instead of "write an email," try "write a professional email to invite a local bank manager to speak at our career day on March 15th."</p>
+
+            <h3>Iterate and Refine</h3>
+            <p>Your first result doesn't have to be perfect. Ask AI to:</p>
+            <ul>
+                <li>"Make this shorter"</li>
+                <li>"Make it more formal"</li>
+                <li>"Add more detail about [topic]"</li>
+                <li>"Rewrite this for a [different audience]"</li>
+            </ul>
+
+            <h3>Start Fresh for New Topics</h3>
+            <p>When you switch to a completely different task, start a new chat. This helps the AI stay focused on your current need.</p>
+
+            <h3>The "LLM Council" Approach</h3>
+            <p>For important decisions, consider asking <strong>multiple AI tools</strong> the same question and comparing responses. When they agree, you can be more confident. When they disagree, you know to dig deeper.</p>
+
+            <h3>Always Review the Output</h3>
+            <p>AI is a powerful assistant, but you're the expert on your students and community. Review everything before using it, and make adjustments as needed.</p>
+
+            <h3>What AI is Good At</h3>
+            <ul>
+                <li>Drafting emails and communications</li>
+                <li>Creating timelines and schedules</li>
+                <li>Generating activity ideas</li>
+                <li>Explaining complex topics simply</li>
+                <li>Brainstorming and organizing thoughts</li>
+                <li>Research with search-enabled tools</li>
+            </ul>
+
+            <h3>What AI is Not Good At</h3>
+            <ul>
+                <li>Knowing your specific students and community</li>
+                <li>Providing guaranteed accurate facts (always verify)</li>
+                <li>Understanding recent local events (without search)</li>
+                <li>Replacing your professional judgment</li>
+            </ul>
+            </div>
+        </section>
+
+        <!-- ============================================
+             SECTION 9: STUDENT ACCESS
+             ============================================ -->
+        <section class="content-section">
+            <h2 class="section-header collapsible-header" data-target="students-content">AI Opportunities for Students</h2>
+            <div class="collapsible-content" id="students-content">
+            <p>Your students can also benefit from AI tools, especially for career preparation.</p>
+
+            <h3>Free Access for Students</h3>
+            <ul>
+                <li><strong>Google Gemini:</strong> <span style="color: var(--hf-green); font-weight: bold;">100% FREE</span> with school Google accounts (all ages, with guardrails for under 18)</li>
+                <li><strong>Canva for Education:</strong> <span style="color: var(--hf-green); font-weight: bold;">100% FREE forever</span> for K-12 students when invited by a verified teacher</li>
+                <li><strong>Microsoft Copilot:</strong> <span style="color: var(--hf-green); font-weight: bold;">FREE</span> for students 13+ if school has Microsoft 365 Education</li>
+                <li><strong>ChatGPT:</strong> Free basic tier for everyone. Premium access through school districts that adopt ChatGPT Edu.</li>
+                <li><strong>Perplexity:</strong> Free basic tier for everyone.</li>
+            </ul>
+
+            <h3>How Students Can Use AI</h3>
+            <ul>
+                <li><strong>Resume Help:</strong> Draft and improve resume content</li>
+                <li><strong>Interview Practice:</strong> Use voice mode for mock interviews at home</li>
+                <li><strong>Career Research:</strong> Explore job requirements and pathways</li>
+                <li><strong>Cover Letters:</strong> Get help starting and refining applications</li>
+                <li><strong>Skill Building:</strong> Learn about certifications and training options</li>
+            </ul>
+
+            <h3>A Note on Device Access</h3>
+            <p>Some schools have Chromebook carts rather than 1:1 devices, and phones are often locked up during the day. Students can:</p>
+            <ul>
+                <li>Access AI tools during designated times in your office</li>
+                <li>Use AI at home on personal devices</li>
+                <li>Work with you during senior seminar or advisory periods</li>
+                <li>Practice mock interviews at home with voice mode</li>
+            </ul>
+            </div>
+        </section>
+
+        <!-- ============================================
+             SECTION 10: RESOURCES
+             ============================================ -->
+        <section id="resources" class="content-section last-section">
+            <h2 class="section-header collapsible-header" data-target="resources-content">Additional Resources</h2>
+            <div class="collapsible-content" id="resources-content">
+
+            <h3>Quick Links to Platforms</h3>
+            <div class="doc-card-grid doc-card-grid-4col" style="margin: 1rem 0;">
+                <a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer" class="link-card">
+                    <img src="images/logos/chatgpt.svg" alt="ChatGPT" class="link-card-icon">
+                    <span class="link-card-title">ChatGPT</span>
+                </a>
+                <a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer" class="link-card">
+                    <svg class="link-card-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    </svg>
+                    <span class="link-card-title">Google Gemini</span>
+                </a>
+                <a href="https://www.canva.com/education/" target="_blank" rel="noopener noreferrer" class="link-card">
+                    <svg class="link-card-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2" fill="none" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <span class="link-card-title">Canva</span>
+                </a>
+                <a href="https://www.perplexity.ai/" target="_blank" rel="noopener noreferrer" class="link-card">
+                    <img src="images/logos/perplexity.svg" alt="Perplexity" class="link-card-icon">
+                    <span class="link-card-title">Perplexity</span>
+                </a>
+            </div>
+
+            <h3>Learn More About AI</h3>
+            <ul>
+                <li><a href="https://tiktokenizer.vercel.app" target="_blank" rel="noopener noreferrer">Tik Tokenizer</a> - See how AI breaks text into tokens (interactive)</li>
+                <li><a href="https://lmarena.ai/leaderboard" target="_blank" rel="noopener noreferrer">Chatbot Arena Leaderboard</a> - Compare AI model performance</li>
+                <li><a href="https://scale.com/leaderboard" target="_blank" rel="noopener noreferrer">Scale AI Leaderboard</a> - Professional AI evaluations</li>
+            </ul>
+
+            <h3>Key Takeaways</h3>
+            <ol>
+                <li><strong>AI is a compressed knowledge base</strong> - great for common info, but verify important facts</li>
+                <li><strong>Tools extend AI's capabilities</strong> - web search for current info, code for calculations</li>
+                <li><strong>Multiple modalities</strong> - text, voice, and images all work</li>
+                <li><strong>Start simple</strong> - try ChatGPT first for writing and planning</li>
+                <li><strong>Use Perplexity for research</strong> - when you need current info with sources</li>
+                <li><strong>Iterate and refine</strong> - your first prompt doesn't have to be perfect</li>
+                <li><strong>AI assists, you decide</strong> - your judgment and local knowledge are irreplaceable</li>
+            </ol>
+
+            <h3>Need Help?</h3>
+            <p>Questions about using AI tools? Reach out to your Heartland Forward team contact for support and additional training opportunities.</p>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Heartland Forward. All rights reserved.</p>
+    <!-- Footer -->
+    <footer style="background-color: var(--hf-navy); color: white; padding: 2rem 1.5rem; text-align: center;">
+        <div style="max-width: 64rem; margin: 0 auto;">
+            <p style="margin: 0; color: rgba(255,255,255,0.9);">&copy; 2025 Heartland Forward. All rights reserved.</p>
+            <p style="margin: 0.5rem 0 0 0; font-size: 0.875rem; color: rgba(255,255,255,0.7);">Rooted Program - Preparing students for the future of work</p>
         </div>
     </footer>
 

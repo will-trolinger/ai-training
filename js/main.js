@@ -2,6 +2,20 @@
 
 // Smooth scrolling for navigation links
 document.addEventListener('DOMContentLoaded', function() {
+    // Collapsible sections
+    const collapsibleHeaders = document.querySelectorAll('.collapsible-header');
+
+    collapsibleHeaders.forEach(header => {
+        header.addEventListener('click', function() {
+            const targetId = this.getAttribute('data-target');
+            if (targetId) {
+                const content = document.getElementById(targetId);
+                if (content) {
+                    content.classList.toggle('collapsed');
+                }
+            }
+        });
+    });
     // Smooth scroll for anchor links
     const links = document.querySelectorAll('a[href^="#"]');
     
