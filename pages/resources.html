@@ -7,57 +7,149 @@
     <title>Resources - AI Training</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" href="../images/branding/hf-logo.svg" type="image/svg+xml">
+    <script src="/js/header.js"></script>
 </head>
 <body>
-    <header class="hf-header">
-        <div class="hf-header-container">
-            <a href="../index.html" class="hf-logo-link">
-                <img src="../images/branding/hf-logo.svg" alt="Heartland Forward" class="hf-logo">
-            </a>
-            <nav class="hf-nav">
-                <a href="../index.html" class="hf-nav-link">Home</a>
-                <a href="how-ai-works.html" class="hf-nav-link">How AI Works</a>
-                <a href="platforms.html" class="hf-nav-link">Platforms</a>
-                <a href="use-cases.html" class="hf-nav-link">Use Cases</a>
-                <a href="prompts.html" class="hf-nav-link">Prompts</a>
-                <a href="resources.html" class="hf-nav-link hf-nav-link-active">Resources</a>
-            </nav>
-        </div>
-    </header>
-
     <main>
         <section class="title-section first-section">
             <h1>Additional Resources</h1>
         </section>
 
-        <section id="quick-links" class="content-section">
-            <h2 class="collapsible-header" data-target="quick-links-content">Quick Links to Platforms</h2>
-            <div class="collapsible-content" id="quick-links-content">
-                <div class="doc-card-grid doc-card-grid-4col" style="margin: 1rem 0;">
-                    <a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer" class="link-card">
-                        <img src="../images/logos/chatgpt.svg" alt="ChatGPT" class="link-card-icon">
-                        <span class="link-card-title">ChatGPT</span>
-                    </a>
-                    <a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer" class="link-card">
-                        <svg class="link-card-icon" viewBox="0 0 24 24" fill="currentColor">
+ <section class="content-section">
+            <div class="doc-card-grid doc-card-grid-2col" style="margin-top: 1.5rem;">
+                <a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer" class="doc-card" style="text-decoration: none;">
+                    <div class="doc-card-header">
+                        <img src="../images/logos/chatgpt.svg" alt="ChatGPT" class="doc-card-icon" style="width: 2rem; height: 2rem;">
+                        <h3 class="doc-card-title" style="margin: 0;">ChatGPT</h3>
+                    </div>
+                    <p class="doc-card-description"><strong>100% FREE for K-12 Teachers (US) through June 2027!</strong> Most comprehensive: web search, code execution, file uploads, image generation, Advanced Voice Mode. Verify via SheerID.</p>
+                </a>
+
+                <a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer" class="doc-card" style="text-decoration: none;">
+                    <div class="doc-card-header">
+                        <svg class="doc-card-icon" style="width: 2rem; height: 2rem;" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
                         </svg>
-                        <span class="link-card-title">Google Gemini</span>
-                    </a>
-                    <a href="https://www.canva.com/education/" target="_blank" rel="noopener noreferrer" class="link-card">
-                        <svg class="link-card-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <h3 class="doc-card-title" style="margin: 0;">Google Gemini</h3>
+                    </div>
+                    <p class="doc-card-description"><strong>FREE for all Google Workspace for Education users.</strong> Integrated Google search, works with Docs/Sheets/Gmail. Automatic access if your school uses Google Workspace.</p>
+                </a>
+
+                <a href="https://www.canva.com/education/" target="_blank" rel="noopener noreferrer" class="doc-card" style="text-decoration: none;">
+                    <div class="doc-card-header">
+                        <svg class="doc-card-icon" style="width: 2rem; height: 2rem;" viewBox="0 0 24 24" fill="currentColor">
                             <rect x="3" y="3" width="18" height="18" rx="2" ry="2" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="8.5" cy="8.5" r="1.5"/>
+                            <path d="M21 15l-5-5L5 21"/>
                         </svg>
-                        <span class="link-card-title">Canva</span>
-                    </a>
-                    <a href="https://www.perplexity.ai/" target="_blank" rel="noopener noreferrer" class="link-card">
-                        <img src="../images/logos/perplexity.svg" alt="Perplexity" class="link-card-icon">
-                        <span class="link-card-title">Perplexity</span>
-                    </a>
-                </div>
+                        <h3 class="doc-card-title" style="margin: 0;">Canva for Education</h3>
+                    </div>
+                    <p class="doc-card-description"><strong>100% FREE FOREVER for K-12.</strong> AI-powered design tools, millions of templates. Best for visual content: flyers, presentations, graphics. Verify with school email.</p>
+                </a>
+
+                <a href="https://www.perplexity.ai/" target="_blank" rel="noopener noreferrer" class="doc-card" style="text-decoration: none;">
+                    <div class="doc-card-header">
+                        <img src="../images/logos/perplexity.svg" alt="Perplexity" class="doc-card-icon" style="width: 2rem; height: 2rem;">
+                        <h3 class="doc-card-title" style="margin: 0;">Perplexity</h3>
+                    </div>
+                    <p class="doc-card-description"><strong>Free basic tier for everyone.</strong> Built specifically for web search - always cites sources. Best for research, current information, and fact-checking.</p>
+                </a>
             </div>
         </section>
 
+        <section class="content-section">
+            <h2 class="collapsible-header" data-target="which-platform-content">Which Platform for Which Task?</h2>
+            <div class="collapsible-content" id="which-platform-content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>If you need to...</th>
+                            <th>Use this</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Write or edit emails, documents, communications</td>
+                            <td>ChatGPT or Gemini</td>
+                        </tr>
+                        <tr>
+                            <td>Research current information with sources</td>
+                            <td>Perplexity</td>
+                        </tr>
+                        <tr>
+                            <td>Create visual materials (flyers, presentations)</td>
+                            <td>Canva</td>
+                        </tr>
+                        <tr>
+                            <td>Practice mock interviews with voice</td>
+                            <td>ChatGPT (mobile app)</td>
+                        </tr>
+                        <tr>
+                            <td>Analyze a document or resume</td>
+                            <td>ChatGPT</td>
+                        </tr>
+                        <tr>
+                            <td>Work within Google Workspace</td>
+                            <td>Gemini</td>
+                        </tr>
+                        <tr>
+                            <td>Create a timeline or event plan</td>
+                            <td>ChatGPT</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="collapsible-header" data-target="educational-access-content">Educational Access Summary</h2>
+            <div class="collapsible-content" id="educational-access-content">
+                <p><em>Information current as of November 2025.</em></p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Platform</th>
+                            <th>K-12 Teachers</th>
+                            <th>K-12 Students</th>
+                            <th>How to Access</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>ChatGPT</strong></td>
+                            <td style="color: var(--hf-green); font-weight: bold;">FREE (US, until June 2027)</td>
+                            <td>Via school districts</td>
+                            <td>SheerID verification at chatgpt.com</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Google Gemini</strong></td>
+                            <td style="color: var(--hf-green); font-weight: bold;">FREE</td>
+                            <td style="color: var(--hf-green); font-weight: bold;">FREE</td>
+                            <td>Automatic with Workspace for Education</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Canva</strong></td>
+                            <td style="color: var(--hf-green); font-weight: bold;">FREE forever</td>
+                            <td style="color: var(--hf-green); font-weight: bold;">FREE forever</td>
+                            <td>canva.com/education - school email or credentials</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Perplexity</strong></td>
+                            <td>Free basic tier</td>
+                            <td>Free basic tier</td>
+                            <td>perplexity.ai - no verification needed</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Microsoft Copilot</strong></td>
+                            <td style="color: var(--hf-green); font-weight: bold;">FREE</td>
+                            <td style="color: var(--hf-green); font-weight: bold;">FREE (13+)</td>
+                            <td>Automatic with Microsoft 365 Education</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        
         <section id="learn-more" class="content-section">
             <h2 class="collapsible-header" data-target="learn-more-content">Learn More About AI</h2>
             <div class="collapsible-content" id="learn-more-content">
@@ -91,13 +183,6 @@
             </div>
         </section>
     </main>
-
-    <footer style="background-color: var(--hf-navy); color: white; padding: 2rem 1.5rem; text-align: center;">
-        <div style="max-width: 64rem; margin: 0 auto;">
-            <p style="margin: 0; color: rgba(255,255,255,0.9);">&copy; 2025 Heartland Forward. All rights reserved.</p>
-            <p style="margin: 0.5rem 0 0 0; font-size: 0.875rem; color: rgba(255,255,255,0.7);">Rooted Program - Preparing students for the future of work</p>
-        </div>
-    </footer>
 
     <script src="../js/collapsible.js"></script>
 </body>

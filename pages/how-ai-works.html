@@ -7,24 +7,9 @@
     <title>How AI Works - AI Training</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" href="../images/branding/hf-logo.svg" type="image/svg+xml">
+    <script src="/js/header.js"></script>
 </head>
 <body>
-    <header class="hf-header">
-        <div class="hf-header-container">
-            <a href="../index.html" class="hf-logo-link">
-                <img src="../images/branding/hf-logo.svg" alt="Heartland Forward" class="hf-logo">
-            </a>
-            <nav class="hf-nav">
-                <a href="../index.html" class="hf-nav-link">Home</a>
-                <a href="how-ai-works.html" class="hf-nav-link hf-nav-link-active">How AI Works</a>
-                <a href="platforms.html" class="hf-nav-link">Platforms</a>
-                <a href="use-cases.html" class="hf-nav-link">Use Cases</a>
-                <a href="prompts.html" class="hf-nav-link">Prompts</a>
-                <a href="resources.html" class="hf-nav-link">Resources</a>
-            </nav>
-        </div>
-    </header>
-
     <main>
         <section class="title-section first-section">
             <h1>How Do AI Chatbots Work?</h1>
@@ -152,86 +137,91 @@
             </div>
         </section>
 
+        <section id="thinking" class="content-section">
+            <h2 class="collapsible-header" data-target="thinking-content">Thinking Models: When AI Reasons Step by Step</h2>
+            <div class="collapsible-content" id="thinking-content">
+                <p>Sometimes you need AI to work through a problem carefully rather than respond instantly. <strong>Thinking models</strong> (also called reasoning models) take extra time to "think" before answering - breaking complex problems into steps, checking their logic, and considering alternatives.</p>
+                <p>When you enable thinking mode:</p>
+                <ul>
+                    <li>The AI pauses before responding (seconds to minutes)</li>
+                    <li>It works through the problem internally, similar to how you might talk yourself through a difficult decision</li>
+                    <li>You often get more accurate answers for complex tasks</li>
+                </ul>
+                <p><strong>When thinking helps most:</strong></p>
+                <ul>
+                    <li>Math and logic problems</li>
+                    <li>Multi-step planning</li>
+                    <li>Analyzing tradeoffs</li>
+                    <li>Tasks where getting it right matters more than getting it fast</li>
+                </ul>
+                <p><strong>When to skip it:</strong></p>
+                <ul>
+                    <li>Quick factual questions</li>
+                    <li>Creative brainstorming</li>
+                    <li>Simple tasks where speed matters</li>
+                </ul>
+                <p><strong>The tradeoff:</strong> Thinking takes longer and uses more resources. For straightforward questions, standard mode is faster and works fine. Save thinking mode for when you need the AI to really work through something.</p>
+            </div>
+        </section>
+
         <section id="tools" class="content-section">
             <h2 class="collapsible-header" data-target="tools-content">Tools: Extending AI's Capabilities</h2>
             <div class="collapsible-content" id="tools-content">
-                <p>Remember those limitations? Modern AI solves them by connecting to external tools. When the AI recognizes it needs outside help, it emits a signal to use a tool, gets the result back as tokens in the context window, and continues. This happens automatically - you just ask your question and the AI decides which tools to use.</p>
+                <p>Remember those limitations? Modern AI solves them by connecting to external tools. When the AI recognizes it needs outside help, it uses a tool, gets the result back, and continues.</p>
 
-                <h3>Web Search</h3>
-                <p>AI can search the internet for current information. You ask a question, the AI formulates a search query, retrieves relevant pages, loads them into its context window, and synthesizes an answer from those fresh sources.</p>
-                <p><strong>When to use it:</strong></p>
-                <ul>
-                    <li>Current job postings, salaries, or hiring trends</li>
-                    <li>Registration deadlines or program requirements</li>
-                    <li>Recent news or policy changes</li>
-                    <li>Any question where the answer might have changed recently</li>
-                </ul>
-                <p><strong>Which tools have it:</strong> Perplexity is built specifically for search and always cites sources. ChatGPT, Gemini, and Claude all have search capabilities - sometimes automatic, sometimes you need to toggle it on or explicitly ask.</p>
-                <p><strong>Tip:</strong> When you know you need current information, explicitly say "search for..." rather than hoping the AI auto-detects the need.</p>
+                <p><strong>Web Search:</strong> Bridges both the knowledge cutoff and niche information gaps by searching the internet in real-time. The AI formulates queries, retrieves pages, and synthesizes answers from current sources. <em>Limitation:</em> Not all websites allow AI tools to access their content, so some information may be unavailable.</p>
 
-                <h3>Deep Research</h3>
-                <p>For complex questions that can't be answered with a single search, some AI tools offer <strong>Deep Research mode</strong>. Instead of one quick search, the AI spends 5-15+ minutes:</p>
-                <ul>
-                    <li>Running dozens of searches across different angles</li>
-                    <li>Reading through articles, papers, and reports</li>
-                    <li>Cross-referencing information from multiple sources</li>
-                    <li>Synthesizing findings into a comprehensive report with citations</li>
-                </ul>
-                <p><strong>Great for:</strong></p>
-                <ul>
-                    <li>Industry analysis for career exploration ("What's the outlook for healthcare administration?")</li>
-                    <li>Deep company research before interviews</li>
-                    <li>Comparing certification programs or schools</li>
-                    <li>Understanding emerging career fields</li>
-                </ul>
-                <p><strong>Important:</strong> Even Deep Research can miss things or make mistakes. Treat the output as a well-researched first draft, not ground truth. Always follow up on citations for critical decisions.</p>
+                <p><strong>Deep Research:</strong> Combines web search with extended reasoning. The AI spends 5-15+ minutes running dozens of searches, reading through sources, and synthesizing findings into a comprehensive report with citations.</p>
 
-                <h3>Code Execution</h3>
-                <p>LLMs can recognize when a problem needs actual computation rather than prediction. For complex math, statistics, or data analysis, the AI writes Python code, runs it in a sandboxed environment, and returns the accurate result.</p>
-                <p><strong>What this enables:</strong></p>
-                <ul>
-                    <li><strong>Data analysis:</strong> Upload a spreadsheet, ask "What are the trends?" or "Which programs have the highest completion rates?"</li>
-                    <li><strong>Accurate calculations:</strong> Complex statistics, financial projections, or any math where estimation isn't good enough</li>
-                    <li><strong>Chart creation:</strong> "Create a bar chart comparing these salaries" - the AI writes code to generate the visualization</li>
-                </ul>
-                <p><strong>Warning:</strong> Not all AI tools have code execution. If a model doesn't have this capability, it will still attempt math questions and may give plausible-looking but incorrect results. ChatGPT has it; Claude and Gemini have limited versions. When accuracy matters, verify the tool actually ran code (it usually shows you).</p>
+                <p><strong>Code Execution:</strong> Some tasks require actual computation rather than language prediction. When needed, the AI writes and runs code to perform calculations, analyze data, or create visualizations - things a language model alone cannot reliably do.</p>
 
                 <table>
                     <thead>
                         <tr>
                             <th>Tool</th>
                             <th>What It Does</th>
-                            <th>When to Use</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td><strong>Web Search</strong></td>
-                            <td>Accesses current internet information</td>
-                            <td>Current events, recent data, fact-checking</td>
+                            <td>Searches internet for current information</td>
                         </tr>
                         <tr>
                             <td><strong>Deep Research</strong></td>
-                            <td>Extended multi-search investigation</td>
-                            <td>Complex research requiring synthesis</td>
+                            <td>Extended multi-search investigation with citations</td>
                         </tr>
                         <tr>
                             <td><strong>Code Execution</strong></td>
-                            <td>Runs Python for calculations/analysis</td>
-                            <td>Math, data analysis, creating charts</td>
+                            <td>Runs code for calculations, data analysis, charts</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </section>
-    </main>
 
-    <footer style="background-color: var(--hf-navy); color: white; padding: 2rem 1.5rem; text-align: center;">
-        <div style="max-width: 64rem; margin: 0 auto;">
-            <p style="margin: 0; color: rgba(255,255,255,0.9);">&copy; 2025 Heartland Forward. All rights reserved.</p>
-            <p style="margin: 0.5rem 0 0 0; font-size: 0.875rem; color: rgba(255,255,255,0.7);">Rooted Program - Preparing students for the future of work</p>
-        </div>
-    </footer>
+        <!-- <section id="agents" class="content-section">
+            <h2 class="collapsible-header" data-target="agents-content">Agents: AI That Takes Action</h2>
+            <div class="collapsible-content" id="agents-content">
+                <p>Everything we've covered so far - thinking, tools, modalities - comes together in <strong>agents</strong>. An agent is AI that doesn't just respond to you, but actively works toward a goal by planning steps, using tools, and adjusting based on results.</p>
+                <p>With a regular chatbot, you're in the driver's seat - asking questions, giving instructions, reviewing each response. With an agent, you describe what you want accomplished, and the AI figures out how to get there.</p>
+                <p><strong>What makes an agent different:</strong></p>
+                <ul>
+                    <li>It breaks your goal into steps on its own</li>
+                    <li>It decides which tools to use and when</li>
+                    <li>It can try something, see the result, and adjust its approach</li>
+                    <li>It works for minutes or hours, not just seconds</li>
+                </ul>
+                <p><strong>Examples you might encounter:</strong></p>
+                <ul>
+                    <li><strong>Research agents</strong> - "Find me 10 remote entry-level marketing jobs posted this week" (searches multiple sites, filters results, compiles a list)</li>
+                    <li><strong>Coding agents</strong> - "Add a dark mode toggle to this website" (reads the codebase, writes code, tests it, fixes errors)</li>
+                    <li><strong>Data agents</strong> - "Analyze this sales data and create a presentation" (processes files, generates charts, builds slides)</li>
+                </ul>
+                <p><strong>The tradeoff:</strong> Agents are powerful but less predictable. They take longer, cost more, and sometimes go down the wrong path. For simple tasks, regular chat is faster and more controlled. Use agents when the task is complex enough that you'd rather delegate the whole thing than manage each step yourself.</p>
+            </div>
+        </section>
+    </main> -->
 
     <script src="../js/collapsible.js"></script>
 </body>
