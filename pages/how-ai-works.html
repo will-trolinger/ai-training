@@ -1,113 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Understanding how AI chatbots work - tokens, context windows, modalities, and tools.">
+    <meta name="description"
+        content="Understanding how AI chatbots work - tokens, context windows, modalities, and tools.">
     <title>How AI Works - AI Training</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" href="../images/branding/hf-logo.svg" type="image/svg+xml">
     <script src="/js/header.js"></script>
 </head>
+
 <body>
     <main>
         <section class="title-section first-section">
             <h1>How Do AI Chatbots Work?</h1>
-            <p style="font-style: italic; color: #6B7280;">AI comes in many forms - from recommendation systems to self-driving cars. Today we're focusing on AI chatbots, the tools you'll use most often in your work.</p>
+            <p style="font-style: italic; color: #6B7280;">AI comes in many forms - from recommendation systems to
+                self-driving cars. Today we're focusing on AI chatbots, the tools you'll use most often in your work.
+            </p>
         </section>
 
         <section id="mental-model" class="content-section">
-            <h2 class="collapsible-header" data-target="mental-model-content">The "Zip File of the Internet" Mental Model</h2>
+            <h2 class="collapsible-header" data-target="mental-model-content">The "Zip File of the Internet" Mental
+                Model</h2>
             <div class="collapsible-content" id="mental-model-content">
-                <img src="../images/ChatGPT Image Nov 25, 2025 at 08_12_21 PM.png" alt="Diagram showing internet content (documents, images, charts) being compressed into a zip file, then transformed into a neural network brain" style="max-width: 500px; width: 100%; height: auto; margin: 1.5rem auto; border-radius: 0.5rem; display: block;">
-                <p>Think of Large Language Models (LLMs) like ChatGPT as a <strong>"zip file" of the internet</strong>. During training, the AI reads essentially all of the internet and compresses that knowledge into its neural network. When you ask a question, it's recalling information from this compressed knowledge base.</p>
-                <p>This compression happens through a process called <strong>pre-training</strong>, where the model learns patterns from massive amounts of text. Then, through <strong>post-training</strong>, human labelers fine-tune it to respond helpfully as an assistant.</p>
-                <p><strong>See what's in the training data:</strong> <a href="https://huggingface.co/spaces/HuggingFaceFW/blogpost-fineweb-v1" target="_blank" rel="noopener noreferrer">FineWeb Explorer</a> lets you search through a sample of the actual web pages used to train AI models.</p>
+                <img src="../images/how-ai-works/ai-overview.png"
+                    alt="Diagram showing internet content (documents, images, charts) being compressed into a zip file, then transformed into a neural network brain"
+                    style="max-width: 500px; width: 100%; height: auto; margin: 1.5rem auto; border-radius: 0.5rem; display: block;">
+                <p>Think of Large Language Models (LLMs) like ChatGPT as a <strong>"zip file" of the internet</strong>.
+                    During training, the AI reads essentially all of the internet and compresses that knowledge into its
+                    neural network. When you ask a question, it's recalling information from this compressed knowledge
+                    base.</p>
+                <p>This compression happens through a process called <strong>pre-training</strong>, where the model
+                    learns patterns from massive amounts of text. Then, through <strong>post-training</strong>, human
+                    labelers fine-tune it to respond helpfully as an assistant.</p>
+                <p><strong>See what's in the training data:</strong> <a
+                        href="https://huggingface.co/spaces/HuggingFaceFW/blogpost-fineweb-v1" target="_blank"
+                        rel="noopener noreferrer">FineWeb Explorer</a> lets you search through a sample of the actual
+                    web pages used to train AI models.</p>
             </div>
         </section>
 
         <section id="prompts" class="content-section">
             <h2 class="collapsible-header" data-target="prompts-content">Prompts: How You Talk to AI</h2>
             <div class="collapsible-content" id="prompts-content">
-                <p>A <strong>prompt</strong> is simply what you type (or say) to the AI. It's your input - the question, instruction, or request that kicks off the conversation. Everything you've learned so far - tokens, context windows, modalities - all comes together in your prompt.</p>
+                <img src="../images/how-ai-works/prompting.png"
+                    alt="Diagram showing internet content (documents, images, charts) being compressed into a zip file, then transformed into a neural network brain"
+                    style="max-width: 400px; width: 100%; height: auto; margin: 1.5rem auto; border-radius: 0.5rem; display: block;">
+                <p>A <strong>prompt</strong> is simply what you type (or say) to the AI. It's your input - the question,
+                    instruction, or request that kicks off the conversation. Everything you've learned so far - tokens,
+                    context windows, modalities - all comes together in your prompt.</p>
                 <p>When you send a prompt:</p>
                 <ul>
                     <li>Your text gets broken into <strong>tokens</strong></li>
                     <li>Those tokens enter the AI's <strong>context window</strong></li>
                     <li>Prompts other forms of data like <strong>images</strong> or <strong>files</strong></li>
                     <li>The AI predicts the most helpful response based on patterns from its training</li>
-                    <li>Some predictions will invoke the usage of external <strong>tools</strong> or <strong>plugins</strong></li>
+                    <li>Some predictions will invoke the usage of external <strong>tools</strong> or
+                        <strong>plugins</strong></li>
 
                 </ul>
-                <p>The quality of AI's output depends heavily on the quality of your input. Vague prompts get vague answers. Specific, well-structured prompts get useful responses. This is why <strong>"prompt engineering"</strong> has become such a valuable skill.</p>
-                <p><strong>Key insight:</strong> You're not searching a database or giving commands to a simple program. You're having a conversation with a system that predicts helpful responses. The more context and clarity you provide, the better it can help you.</p>
+                <p>The quality of AI's output depends heavily on the quality of your input. Vague prompts get vague
+                    answers. Specific, well-structured prompts get useful responses. This is why <strong>"prompt
+                        engineering"</strong> has become such a valuable skill.</p>
+                <p><strong>Key insight:</strong> You're not searching a database or giving commands to a simple program.
+                    You're having a conversation with a system that predicts helpful responses. The more context and
+                    clarity you provide, the better it can help you.</p>
             </div>
         </section>
 
         <section id="tokens" class="content-section">
-            <h2 class="collapsible-header" data-target="tokens-content"
-            >Understanding Tokens: How AI Reads Text</h2>
+            <h2 class="collapsible-header" data-target="tokens-content">Understanding Tokens: How AI Reads Text</h2>
             <div class="collapsible-content" id="tokens-content">
-                <img src="../images/CleanShot 2025-11-25 at 23.11.11@2x.png" alt="Diagram showing tokenization process of text." style="max-width: 800px; width: 100%; height: auto; margin: 1.5rem auto; border-radius: 0.5rem; display: block;">
-                <p>AI doesn't read words the way we do. It breaks text into <strong>tokens</strong> - small chunks that can be parts of words, whole words, or punctuation. A short sentence might be 15 tokens, while a paragraph could be 50-100 tokens.</p>
+                <img src="../images/how-ai-works/tokenization.png"
+                    alt="Diagram showing tokenization process of text."
+                    style="max-width: 90%; width: 100%; height: auto; margin: 1.5rem auto; border-radius: 0.5rem; display: block;">
+                <p>AI doesn't read words the way we do. It breaks text into <strong>tokens</strong> - small chunks that
+                    can be parts of words, whole words, or punctuation. A short sentence might be 15 tokens, while a
+                    paragraph could be 50-100 tokens.</p>
                 <p>Why does this matter?</p>
                 <ul>
                     <li>Longer conversations use more tokens, which can slow things down</li>
                     <li>There's a limit to how many tokens AI can process at once (the "context window")</li>
                     <li>Understanding tokens helps you write more efficient prompts</li>
                 </ul>
-                <p><strong>Try it yourself:</strong> <a href="https://tiktokenizer.vercel.app" target="_blank" rel="noopener noreferrer">Tik Tokenizer</a> lets you see exactly how your text gets broken into tokens.</p>
+                <p><strong>Try it yourself:</strong> <a href="https://tiktokenizer.vercel.app" target="_blank"
+                        rel="noopener noreferrer">Tik Tokenizer</a> lets you see exactly how your text gets broken into
+                    tokens.</p>
             </div>
         </section>
 
         <section id="context-window" class="content-section">
-            <h2 class="collapsible-header" data-target="context-window-content">The Context Window: AI's Working Memory</h2>
+            <h2 class="collapsible-header" data-target="context-window-content">The Context Window: AI's Working Memory
+            </h2>
             <div class="collapsible-content" id="context-window-content">
-                <img src="../images/context-window.svg" alt="Diagram that represents how context windows work." style="max-width: 800px; width: 100%; height: auto; margin: 1.5rem auto; border-radius: 0.5rem; display: block;">
-                <p>When you chat with AI, you're building a <strong>one-dimensional token sequence</strong> together. Your messages + AI's responses = the conversation history. This is called the <strong>context window</strong> - it's the AI's working memory for your conversation.</p>
+                <img src="../images/how-ai-works/context-window.svg" alt="Diagram that represents how context windows work."
+                    style="max-width: 800px; width: 100%; height: auto; margin: 1.5rem auto; border-radius: 0.5rem; display: block;">
+                <p style="font-size: 0.875rem; color: #6B7280; text-align: center; margin-top: 0.5rem;"></p>
+                <p>When you chat with AI, you're building a <strong>one-dimensional token sequence</strong> together.
+                    Your messages + AI's responses = the conversation history. This is called the <strong>context
+                        window</strong> - it's the AI's working memory for your conversation.</p>
                 <ul>
                     <li>AI remembers everything in your current chat</li>
                     <li>When you start a <strong>new chat</strong>, you wipe that memory and start fresh</li>
                     <li>Starting fresh is often good - it keeps the AI focused on your current task</li>
                 </ul>
-                <p>The context window can be thought of like a short-term memory for the AI. It holds the recent conversation so the AI can respond appropriately, but it has a limited capacity.</p>
-                <p><strong>Tip:</strong> Start a new chat when switching to a completely different topic. This prevents the AI from being distracted by old content and can improve response quality.</p>
-                <p><strong>Visualize it:</strong> <a href="https://context-windows.damien-henry.com" target="_blank" rel="noopener noreferrer">Context Window Size Visualizer</a> lets you select different AI models and see exactly how much text fits in their context window - scroll through randomly generated content to experience the actual volume each model can process.</p>
+                <p>The context window can be thought of like a short-term memory for the AI. It holds the recent
+                    conversation so the AI can respond appropriately, but it has a limited capacity.</p>
+                <p><strong>Tip:</strong> Start a new chat when switching to a completely different topic. This prevents
+                    the AI from being distracted by old content and can improve response quality.</p>
+                <p><strong>Visualize it:</strong> <a href="https://context-windows.damien-henry.com" target="_blank"
+                        rel="noopener noreferrer">Context Window Size Visualizer</a> lets you select different AI models
+                    and see exactly how much text fits in their context window - scroll through randomly generated
+                    content to experience the actual volume each model can process.</p>
             </div>
         </section>
 
         <section id="probabilistic-recall" class="content-section">
-            <h2 class="collapsible-header" data-target="probabilistic-recall-content">Probabilistic Recall: Why AI Can Be Wrong</h2>
+            <h2 class="collapsible-header" data-target="probabilistic-recall-content">Probabilistic Recall: Why AI Can
+                Be Wrong</h2>
             <div class="collapsible-content" id="probabilistic-recall-content">
-                <p>AI doesn't "remember" facts like a database looks up records. It <strong>probabilistically reconstructs</strong> information based on patterns. This means:</p>
+                <img src="../images/how-ai-works/prediction.png"
+                    alt="Diagram showing internet content (documents, images, charts) being compressed into a zip file, then transformed into a neural network brain"
+                    style="max-width: 600px; width: 100%; height: auto; margin: 1.5rem auto; border-radius: 0.5rem; display: block;">
+                <p>AI doesn't "remember" facts like a database looks up records. It <strong>probabilistically
+                        reconstructs</strong> information based on patterns. This means:</p>
                 <ul>
                     <li>It can occasionally get facts wrong (called "hallucinations")</li>
                     <li>It may sound confident even when incorrect</li>
                     <li>Common information is more reliable than obscure details</li>
                     <li><strong>Always verify important information</strong> against primary sources</li>
                 </ul>
-                <p><strong>You've seen this before:</strong> Your phone's <a href="https://support.apple.com/en-mt/guide/ipod-touch/iphd4ea90231/ios" target="_blank" rel="noopener noreferrer">predictive text keyboard</a> works the same way - it suggests words based on patterns, not by looking them up in a dictionary. AI chatbots are just a much larger version of this same concept.</p>
+                <p><strong>You've seen this before:</strong> Your phone's <a
+                        href="https://support.apple.com/en-mt/guide/ipod-touch/iphd4ea90231/ios" target="_blank"
+                        rel="noopener noreferrer">predictive text keyboard</a> works the same way - it suggests words
+                    based on patterns, not by looking them up in a dictionary. AI chatbots are just a much larger
+                    version of this same concept.</p>
         </section>
         <section id="two-limitations" class="content-section">
-                <h2 class="collapsible-header" data-target="two-limitations-content">Two Critical Limitations of Core LLMs</h2>
-                <div class="collapsible-content" id="two-limitations-content">
+            <h2 class="collapsible-header" data-target="two-limitations-content">Two Critical Limitations of Core LLMs
+            </h2>
+            <div class="collapsible-content" id="two-limitations-content">
+            <img src="../images/how-ai-works/limitations.png"
+                    alt="Diagram showing internet content (documents, images, charts) being compressed into a zip file, then transformed into a neural network brain"
+                    style="max-width: 400px; width: 100%; height: auto; margin: 1.5rem auto; border-radius: 0.5rem; display: block;">
 
-                <p>By default, when you talk to an AI, you're talking to a <strong>self-contained entity</strong>. There's no calculator, no internet connection, no access to your files - just a neural network predicting helpful responses based on its compressed knowledge. This creates two important limitations:</p>
+                <p>By default, when you talk to an AI, you're talking to a <strong>self-contained entity</strong>.
+                    There's no calculator, no internet connection, no access to your files - just a neural network
+                    predicting helpful responses based on its compressed knowledge. This creates two important
+                    limitations:</p>
                 <ul>
-                    <li><strong>Knowledge cutoff dates</strong> - AI models are trained at a specific point in time, so they don't automatically know about recent news, current job postings, or today's market conditions. (<a href="https://www.allmo.ai/articles/list-of-large-language-model-cut-off-dates" target="_blank" rel="noopener noreferrer">See current cutoff dates</a>)</li>
-                    <li><strong>Niche information gaps</strong> - AI excels at common knowledge but struggles with specialized, local information like specific company cultures, regional employer preferences, or your school's particular policies.</li>
+                    <li><strong>Knowledge cutoff dates</strong> - AI models are trained at a specific point in time, so
+                        they don't automatically know about recent news, current job postings, or today's market
+                        conditions. (<a href="https://www.allmo.ai/articles/list-of-large-language-model-cut-off-dates"
+                            target="_blank" rel="noopener noreferrer">See current cutoff dates</a>)</li>
+                    <li><strong>Niche information gaps</strong> - AI excels at common knowledge but struggles with
+                        specialized, local information like specific company cultures, regional employer preferences, or
+                        your school's particular policies.</li>
                 </ul>
-                <p><strong>The good news?</strong> These limitations have solutions. Modern AI tools come equipped with <strong>additional capabilities</strong> that extend what they can do far beyond their base training...</p>
+                <p><strong>The good news?</strong> These limitations have solutions. Modern AI tools come equipped with
+                    <strong>additional capabilities</strong> that extend what they can do far beyond their base
+                    training...</p>
             </div>
         </section>
 
         <section id="modalities" class="content-section">
             <h2 class="collapsible-header" data-target="modalities-content">Modalities: Different Ways to Interact</h2>
             <div class="collapsible-content" id="modalities-content">
-                <p>AI isn't limited to text. You can interact through voice and images too - but under the hood, everything still becomes tokens in that same context window.</p>
-                <p><strong>Voice:</strong> Speak instead of type (tap the microphone icon). Your speech gets transcribed to text, converted to tokens, and processed like any typed message. Advanced Voice Mode in ChatGPT enables real-time conversations - great for mock interview practice.</p>
-                <p><strong>Image Input:</strong> Upload photos and the AI "sees" them by converting the image into tokens (through a process of breaking it into patches). This works for text-based images like screenshots and documents, but also for identifying objects, plants, animals, landmarks, or anything visual - the AI analyzes what it sees, not just reads text from it.</p>
-                <p><strong>File Upload (data):</strong> Upload files for the AI to analyze and extract information from. This can include documents, spreadsheets, and more, allowing for deeper interaction with your data.</p>
+            <img src="../images/how-ai-works/modalities.png"
+                    alt="Diagram showing internet content (documents, images, charts) being compressed into a zip file, then transformed into a neural network brain"
+                    style="max-width: 500px; width: 100%; height: auto; margin: 1.5rem auto; border-radius: 0.5rem; display: block;">
+
+                <p>AI isn't limited to text. You can interact through voice and images too - but under the hood,
+                    everything still becomes tokens in that same context window.</p>
+                <p><strong>Voice:</strong> Speak instead of type (tap the microphone icon). Your speech gets transcribed
+                    to text, converted to tokens, and processed like any typed message. Advanced Voice Mode in ChatGPT
+                    enables real-time conversations - great for mock interview practice.</p>
+                <p><strong>Image Input:</strong> Upload photos and the AI "sees" them by converting the image into
+                    tokens (through a process of breaking it into patches). This works for text-based images like
+                    screenshots and documents, but also for identifying objects, plants, animals, landmarks, or anything
+                    visual - the AI analyzes what it sees, not just reads text from it.</p>
+                <p><strong>File Upload (data):</strong> Upload files for the AI to analyze and extract information from.
+                    This can include documents, spreadsheets, and more, allowing for deeper interaction with your data.
+                </p>
                 <table>
                     <thead>
                         <tr>
@@ -138,13 +214,22 @@
         </section>
 
         <section id="thinking" class="content-section">
-            <h2 class="collapsible-header" data-target="thinking-content">Thinking Models: When AI Reasons Step by Step</h2>
+            <h2 class="collapsible-header" data-target="thinking-content">Thinking Models: When AI Reasons Step by Step
+            </h2>
             <div class="collapsible-content" id="thinking-content">
-                <p>Sometimes you need AI to work through a problem carefully rather than respond instantly. <strong>Thinking models</strong> (also called reasoning models) take extra time to "think" before answering - breaking complex problems into steps, checking their logic, and considering alternatives.</p>
+            <img src="../images/how-ai-works/cot-prompting.png"
+                    alt="Diagram showing internet content (documents, images, charts) being compressed into a zip file, then transformed into a neural network brain"
+                    style="max-width: 800px; width: 100%; height: auto; margin: 1.5rem auto; border-radius: 0.5rem; display: block;">
+
+                <p>Sometimes you need AI to work through a problem carefully rather than respond instantly.
+                    <strong>Thinking models</strong> (also called reasoning models) take extra time to "think" before
+                    answering - breaking complex problems into steps, checking their logic, and considering
+                    alternatives.</p>
                 <p>When you enable thinking mode:</p>
                 <ul>
                     <li>The AI pauses before responding (seconds to minutes)</li>
-                    <li>It works through the problem internally, similar to how you might talk yourself through a difficult decision</li>
+                    <li>It works through the problem internally, similar to how you might talk yourself through a
+                        difficult decision</li>
                     <li>You often get more accurate answers for complex tasks</li>
                 </ul>
                 <p><strong>When thinking helps most:</strong></p>
@@ -160,20 +245,30 @@
                     <li>Creative brainstorming</li>
                     <li>Simple tasks where speed matters</li>
                 </ul>
-                <p><strong>The tradeoff:</strong> Thinking takes longer and uses more resources. For straightforward questions, standard mode is faster and works fine. Save thinking mode for when you need the AI to really work through something.</p>
+                <p><strong>The tradeoff:</strong> Thinking takes longer and uses more resources. For straightforward
+                    questions, standard mode is faster and works fine. Save thinking mode for when you need the AI to
+                    really work through something.</p>
             </div>
         </section>
 
         <section id="tools" class="content-section">
             <h2 class="collapsible-header" data-target="tools-content">Tools: Extending AI's Capabilities</h2>
             <div class="collapsible-content" id="tools-content">
-                <p>Remember those limitations? Modern AI solves them by connecting to external tools. When the AI recognizes it needs outside help, it uses a tool, gets the result back, and continues.</p>
+            <img src="../images/how-ai-works/reasoning-models.png"
+                    alt="Diagram showing internet content (documents, images, charts) being compressed into a zip file, then transformed into a neural network brain"
+                    style="max-width: 75%; width: 100%; height: auto; margin: 1.5rem auto; border-radius: 0.5rem; display: block;">
 
-                <p><strong>Web Search:</strong> Bridges both the knowledge cutoff and niche information gaps by searching the internet in real-time. The AI formulates queries, retrieves pages, and synthesizes answers from current sources. <em>Limitation:</em> Not all websites allow AI tools to access their content, so some information may be unavailable.</p>
+                <p>Remember those limitations? Modern AI solves them by connecting to external tools. When the AI
+                    recognizes it needs outside help, it uses a tool, gets the result back, and continues.</p>
 
-                <p><strong>Deep Research:</strong> Combines web search with extended reasoning. The AI spends 5-15+ minutes running dozens of searches, reading through sources, and synthesizing findings into a comprehensive report with citations.</p>
+                <p><strong>Web Search:</strong> Bridges both the knowledge cutoff and niche information gaps by
+                    searching the internet in real-time. The AI formulates queries, retrieves pages, and synthesizes
+                    answers from current sources. <em>Limitation:</em> Not all websites allow AI tools to access their
+                    content, so some information may be unavailable.</p>
 
-                <p><strong>Code Execution:</strong> Some tasks require actual computation rather than language prediction. When needed, the AI writes and runs code to perform calculations, analyze data, or create visualizations - things a language model alone cannot reliably do.</p>
+                <p><strong>Code Execution:</strong> Some tasks require actual computation rather than language
+                    prediction. When needed, the AI writes and runs code to perform calculations, analyze data, or
+                    create visualizations - things a language model alone cannot reliably do.</p>
 
                 <table>
                     <thead>
@@ -188,15 +283,43 @@
                             <td>Searches internet for current information</td>
                         </tr>
                         <tr>
-                            <td><strong>Deep Research</strong></td>
-                            <td>Extended multi-search investigation with citations</td>
-                        </tr>
-                        <tr>
                             <td><strong>Code Execution</strong></td>
                             <td>Runs code for calculations, data analysis, charts</td>
                         </tr>
                     </tbody>
                 </table>
+            </div>
+        </section>
+
+        <section id="deep-research" class="content-section">
+            <h2 class="collapsible-header" data-target="deep-research-content">Deep Research: Your AI Research Assistant</h2>
+            <div class="collapsible-content" id="deep-research-content">
+                <p>Deep Research isn't just another tool - it's a full research workflow. Instead of a quick web search, the AI becomes a research assistant that works for you over 5-30 minutes, running dozens of searches, reading through sources, and synthesizing findings into a comprehensive report.</p>
+
+                <p><strong>How it works:</strong></p>
+                <ul>
+                    <li>You describe what you want to research</li>
+                    <li>The AI creates a research plan and asks clarifying questions</li>
+                    <li>It runs 20-50+ web searches, reading and analyzing pages</li>
+                    <li>It synthesizes everything into a structured report with citations</li>
+                </ul>
+
+                <p><strong>Best use cases for career services:</strong></p>
+                <ul>
+                    <li><strong>Labor market research</strong> - "Research entry-level marketing salaries in the Boston area, including trends and top employers"</li>
+                    <li><strong>Industry analysis</strong> - "What skills are most in-demand for data analytics roles in 2025?"</li>
+                    <li><strong>Employer research</strong> - "Compile information about [Company]'s culture, interview process, and recent news"</li>
+                    <li><strong>Resource compilation</strong> - "Find scholarship opportunities for first-generation college students in STEM"</li>
+                </ul>
+
+                <p><strong>Where to find it:</strong></p>
+                <ul>
+                    <li><strong>ChatGPT:</strong> Look for "Deep Research" in the model selector (requires Plus/Pro)</li>
+                    <li><strong>Gemini:</strong> "Deep Research" option in Google's Gemini</li>
+                    <li><strong>Perplexity:</strong> "Pro Search" offers similar extended research</li>
+                </ul>
+
+                <p><strong>The tradeoff:</strong> Deep Research takes real time (minutes, not seconds) and typically counts against usage limits more heavily. Use it when you need comprehensive research, not for quick questions.</p>
             </div>
         </section>
 
@@ -223,6 +346,7 @@
         </section>
     </main> -->
 
-    <script src="../js/collapsible.js"></script>
+        <script src="../js/collapsible.js"></script>
 </body>
+
 </html>
