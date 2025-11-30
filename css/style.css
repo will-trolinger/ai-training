@@ -563,3 +563,163 @@ section.title-section {
   color: #4B5563;
   text-align: center;
 }
+
+/* ============================================
+   RESOURCE CARDS (for resources.html)
+   ============================================ */
+
+.highlight-card {
+  background: linear-gradient(135deg, rgba(1, 153, 102, 0.08), rgba(36, 50, 105, 0.08));
+  border: 2px solid var(--hf-green);
+}
+
+.price-comparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin: 0.75rem 0;
+}
+
+@media (max-width: 600px) {
+  .price-comparison {
+    grid-template-columns: 1fr;
+  }
+}
+
+.price-box {
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.price-box-standard {
+  background: #F3F4F6;
+}
+
+.price-box-edu {
+  background: rgba(1, 153, 102, 0.1);
+  border: 1px solid var(--hf-green);
+}
+
+.price-box-full {
+  grid-column: span 2;
+}
+
+.price-label {
+  font-size: 0.75rem;
+  color: #6B7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.price-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--hf-navy);
+  margin: 0.25rem 0;
+}
+
+.price-box-edu .price-value {
+  color: var(--hf-green);
+}
+
+.price-note {
+  font-size: 0.75rem;
+  color: #6B7280;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 1rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-left: auto;
+}
+
+.badge-free {
+  background: var(--hf-green);
+  color: white;
+}
+
+.badge-discount {
+  background: var(--hf-navy);
+  color: white;
+}
+
+.badge-institution {
+  background: #6B7280;
+  color: white;
+}
+
+.eligibility-tag {
+  display: inline-block;
+  padding: 0.15rem 0.4rem;
+  background: #F3F4F6;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  margin-right: 0.35rem;
+  margin-bottom: 0.35rem;
+  color: #374151;
+}
+
+.resource-link {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.5rem 1rem;
+  background: var(--hf-green);
+  color: white !important;
+  text-decoration: none !important;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: opacity 0.2s;
+}
+
+.resource-link:hover {
+  opacity: 0.9;
+  text-decoration: none !important;
+}
+
+.section-intro {
+  background: rgba(36, 50, 105, 0.05);
+  border-left: 4px solid var(--hf-navy);
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.resource-description {
+  font-size: 0.85rem;
+  margin: 0.5rem 0;
+}
+
+.table-row-highlight {
+  background: rgba(1, 153, 102, 0.1);
+}
+
+.table-row-muted {
+  background: #F9FAFB;
+}
+
+.text-small {
+  font-size: 0.85rem;
+}
+
+.text-muted {
+  color: #6B7280;
+}
+
+.icon-large {
+  width: 2rem;
+  height: 2rem;
+}
+
+.link-card-subtitle {
+  margin: 0;
+  font-size: 0.75rem;
+  color: var(--hf-green);
+  font-weight: 600;
+}
