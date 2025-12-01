@@ -2,10 +2,15 @@ const headerScript = document.currentScript;
 
 async function loadHeader() {
     try {
-        const scriptPath = headerScript?.src || document.querySelector('script[src*="header.js"]').src;
-        const basePath = scriptPath.substring(0, scriptPath.lastIndexOf('/js/'));
+        const scriptUrl = new URL(headerScript?.src || document.querySelector('script[src*="header.js"]').src);
+        const basePath = scriptUrl.href.substring(0, scriptUrl.href.lastIndexOf('/js/'));
+
+        console.log('Header.js basePath:', basePath);
 
         const response = await fetch(basePath + '/components/header.html');
+        if (!response.ok) {
+            throw new Error('Failed to fetch header: ' + response.status);
+        }
         let html = await response.text();
 
         html = html.replace(/href="\//g, 'href="' + basePath + '/');
