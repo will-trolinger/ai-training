@@ -1,7 +1,15 @@
+const headerScript = document.currentScript;
+
 async function loadHeader() {
     try {
-        const response = await fetch('/components/header.html');
-        const html = await response.text();
+        const scriptPath = headerScript?.src || document.querySelector('script[src*="header.js"]').src;
+        const basePath = scriptPath.substring(0, scriptPath.lastIndexOf('/js/'));
+
+        const response = await fetch(basePath + '/components/header.html');
+        let html = await response.text();
+
+        html = html.replace(/href="\//g, 'href="' + basePath + '/');
+        html = html.replace(/src="\//g, 'src="' + basePath + '/');
 
         document.body.insertAdjacentHTML('afterbegin', html);
 
