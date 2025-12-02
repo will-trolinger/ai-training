@@ -5,8 +5,6 @@ async function loadHeader() {
         const scriptUrl = new URL(headerScript?.src || document.querySelector('script[src*="header.js"]').src);
         const basePath = scriptUrl.href.substring(0, scriptUrl.href.lastIndexOf('/js/'));
 
-        console.log('Header.js basePath:', basePath);
-
         const response = await fetch(basePath + '/components/header.html');
         if (!response.ok) {
             throw new Error('Failed to fetch header: ' + response.status);
@@ -23,9 +21,38 @@ async function loadHeader() {
         if (activeLink) {
             activeLink.classList.add('hf-nav-link-active');
         }
+
+        initMobileMenu();
     } catch (error) {
         console.error('Error loading header:', error);
     }
+}
+
+function initMobileMenu() {
+    const menuBtn = document.querySelector('.hf-menu-btn');
+    const nav = document.querySelector('.hf-nav');
+    const overlay = document.querySelector('.hf-menu-overlay');
+
+    if (!menuBtn || !nav || !overlay) return;
+
+    function toggleMenu() {
+        const isOpen = nav.classList.toggle('open');
+        overlay.classList.toggle('open');
+        menuBtn.setAttribute('aria-expanded', isOpen);
+    }
+
+    function closeMenu() {
+        nav.classList.remove('open');
+        overlay.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+    }
+
+    menuBtn.addEventListener('click', toggleMenu);
+    overlay.addEventListener('click', closeMenu);
+
+    nav.querySelectorAll('.hf-nav-link').forEach(link => {
+        link.addEventListener('click', closeMenu);
+    });
 }
 
 if (document.readyState === 'loading') {
